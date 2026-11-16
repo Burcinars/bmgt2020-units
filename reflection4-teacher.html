@@ -163,9 +163,11 @@ async function connect(){
   if (!$('key').value.trim()){ show('connMsg', 'Type the instructor key first.', true); return; }
   lsSet('nl_key', $('key').value.trim());
   pill('connState', 'loading…', 'gray');
-  var r = await post({action:'rceResults', activity:activity(), section:CFG.SECTION});
+  var act = activity();
+  var r = await post({action:'rceResults', activity:act, section:CFG.SECTION});
+  if (act !== activity()) return;   // the activity was switched while this was loading; the newer load wins
   if (!r || !r.ok){ pill('connState', 'not connected', 'warn'); show('connMsg', r && r.error === 'unauthorized' ? 'The key did not match.' : 'Could not load results: ' + ((r && r.error) || 'no answer') + '.', true); return; }
-  rows = (r.rows || []).filter(function(x){ return String(x.activity) === activity() && String(x.section) === CFG.SECTION; });
+  rows = (r.rows || []).filter(function(x){ return String(x.activity) === act && String(x.section) === CFG.SECTION; });
   pill('connState', 'connected · ' + rows.length + ' record' + (rows.length === 1 ? '' : 's'), 'ok');
   if (roster.length && !roster[0].h2) await matchRoster();
   paint();
