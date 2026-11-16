@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Six Days at Riverside Market · Reflection 4 · BMGT 2020</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#111418;--ink2:#2a2f3a;--muted:#424854;--line:#d6d2c8;--bg:#ffffff;--soft:#f3f1ec;
+ --lav:#E9E3F7;--sky:#DCEBFA;--butter:#FBF0C4;--peach:#FFE2CC;--pink:#FADDE7;--mint:#DDF1E6;--kw:#3b2a8c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Lexend','Atkinson Hyperlegible','Avenir Next',Avenir,Verdana,'Segoe UI',sans-serif;font-size:20px;line-height:1.75;letter-spacing:.02em;word-spacing:.05em;-webkit-font-smoothing:antialiased}
+b,strong{font-weight:700}
+.kw{color:var(--kw);font-weight:700}
+.testbar{background:var(--fg);color:#fff;text-align:center;font-weight:600;font-size:16px;padding:6px 10px;letter-spacing:.06em}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:2px solid var(--line);padding:12px 20px 10px}
+.top{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-weight:700;font-size:19px;line-height:1.3}
+.brand span{display:block;font-weight:400;font-size:16px;color:var(--muted)}
+.pill{display:inline-block;background:var(--soft);border-radius:999px;padding:5px 14px;font-size:16px;font-weight:600;white-space:nowrap}
+.prog{max-width:820px;height:8px;margin:10px auto 0;background:var(--soft);border-radius:999px;overflow:hidden}
+.prog div{height:100%;width:0;background:var(--fg);transition:width .3s}
+main{max-width:820px;margin:0 auto;padding:28px 20px 160px}
+h1{font-size:34px;line-height:1.25;margin:4px 0 20px;font-weight:700}
+h2{font-size:25px;line-height:1.3;margin:32px 0 12px;font-weight:700}
+p{margin:0 0 14px}
+.lead{font-size:22px;line-height:1.7}
+.tag{display:inline-block;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.note{font-size:18px;color:var(--ink2)}
+.card{border-radius:18px;padding:20px 24px;margin:20px 0;background:var(--soft)}
+.card.lav{background:var(--lav)}.card.sky{background:var(--sky)}.card.butter{background:var(--butter)}.card.peach{background:var(--peach)}.card.pink{background:var(--pink)}.card.mint{background:var(--mint)}.card.white{background:#fff;border:2px solid var(--line)}
+.card p:last-child{margin-bottom:0}
+.card .tag{display:block;margin-bottom:6px}
+hr{border:0;border-top:2px solid rgba(17,20,24,.12);margin:18px 0}
+.steps{margin:0;padding-left:1.5em}.steps li{margin:0 0 12px;padding-left:.3em}.steps li:last-child{margin-bottom:0}
+.big{font-size:22px}
+.beat{display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:stretch;margin:18px 0}
+.beat.solo{grid-template-columns:1fr}
+.who{background:#fff;border:2px solid var(--line);border-radius:16px;padding:14px 12px;text-align:center;align-self:start}
+.av{width:58px;height:58px;border-radius:50%;margin:0 auto 8px;display:grid;place-items:center;font-weight:700;font-size:25px;color:var(--fg);border:2px solid rgba(17,20,24,.2)}
+.nm{font-weight:700;font-size:19px;line-height:1.3}
+.jt{font-size:16px;line-height:1.35;color:var(--ink2);margin-top:2px}
+.jt2{font-size:15.5px;line-height:1.35;color:var(--muted)}
+.say{border-radius:16px;padding:16px 20px;background:var(--soft)}
+.say.plain{background:transparent;padding:2px 2px}
+.say p{margin:0 0 12px}.say p:last-child{margin:0}
+.say.rule{background:var(--butter)}
+.say.study{background:var(--sky)}
+.say .lbl{display:block;font-size:16px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.phone{max-width:560px;background:#fff;border:2px solid var(--line);border-radius:22px;padding:16px 18px}
+.phone .from{font-size:16px;color:var(--muted);margin-bottom:8px}
+.bubble{background:#e8e8ee;border-radius:20px 20px 20px 6px;padding:14px 18px;font-size:19.5px}
+.dayhead{display:flex;gap:16px;align-items:center;margin-bottom:8px}
+.dayhead .em{font-size:46px;line-height:1;flex:none}
+.dayhead h1{margin:2px 0 0}
+.opt{display:flex;gap:16px;align-items:flex-start;width:100%;text-align:left;font:inherit;letter-spacing:inherit;color:var(--fg);border:3px solid transparent;border-radius:18px;padding:18px 20px;margin:16px 0;cursor:pointer;transition:opacity .2s}
+.opt .k{flex:none;width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--fg);display:grid;place-items:center;font-weight:700}
+.opt .t{display:block;font-weight:700;font-size:21px;line-height:1.4}
+.opt .s{display:block;margin-top:6px;font-size:19px;line-height:1.65;color:var(--ink2)}
+.opt:hover{border-color:rgba(17,20,24,.35)}
+.opt.sel{border-color:var(--fg)}
+.opt.sel .k{background:var(--fg);color:#fff}
+.opt:disabled{cursor:default}
+.opt.dim{opacity:.4}
+.opt:focus-visible,.btn:focus-visible,textarea:focus-visible,input:focus-visible{outline:4px solid var(--kw);outline-offset:3px}
+.lockrow{border:2px dashed var(--fg);border-radius:16px;padding:16px 20px;margin:24px 0}
+.btn{font:inherit;font-size:19px;font-weight:700;letter-spacing:.02em;background:var(--fg);color:#fff;border:2px solid var(--fg);border-radius:14px;padding:12px 22px;min-height:52px;cursor:pointer;margin:6px 10px 6px 0}
+.btn.big{font-size:21px;padding:14px 30px}
+.btn.ghost{background:#fff;color:var(--fg)}
+.btn.soft{background:var(--soft);color:var(--fg);border-color:var(--soft)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.fit{display:inline-block;font-weight:700;border-radius:999px;padding:8px 20px;font-size:20px;border:2px solid}
+.fit.small{font-size:16px;padding:3px 12px}
+.fit.S{background:var(--sky);border-color:#2c6aa8}
+.fit.P{background:var(--butter);border-color:#a8870e}
+.fit.W{background:var(--peach);border-color:#b8642c}
+.youchose{font-size:20px;margin:16px 0 4px}
+.why p{margin-bottom:14px}
+textarea{width:100%;min-height:240px;font:inherit;font-size:19px;line-height:1.7;padding:14px 16px;border:2px solid var(--line);border-radius:14px;background:#fff;color:var(--fg);resize:vertical}
+.counter{font-size:17px;margin-top:6px;color:var(--ink2)}
+.ok{font-weight:700}
+input.field{width:100%;max-width:340px;font:inherit;font-size:26px;letter-spacing:.14em;padding:10px 14px;border:2px solid var(--line);border-radius:14px}
+.agree{display:flex;gap:14px;align-items:flex-start;font-weight:600;margin:24px 0 10px;cursor:pointer}
+.agree input{width:28px;height:28px;flex:none;margin-top:3px;accent-color:#111418}
+.bigid{font-size:38px;letter-spacing:.2em;font-weight:700;margin:6px 0 12px}
+.checks{list-style:none;padding:0;margin:10px 0 20px}
+.checks li{padding:12px 0 12px 46px;position:relative;border-bottom:1px solid var(--line)}
+.checks li .box{position:absolute;left:0;top:13px;width:30px;height:30px;border:2px solid var(--fg);border-radius:8px;display:grid;place-items:center;font-weight:700;font-size:17px;background:#fff;line-height:1}
+.checks li.on .box{background:var(--fg);color:#fff}
+.msg{border-radius:14px;padding:14px 18px;margin:14px 0;font-weight:500}
+.msg.good{background:var(--sky)}.msg.warn{background:var(--peach)}.msg.info{background:var(--butter)}
+.sumrow{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
+.sumrow .d{font-weight:700}
+.sumrow .c{color:var(--ink2);font-size:18px}
+.quote{white-space:pre-wrap;background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px;font-size:18.5px}
+.idea{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;margin:12px 0}
+.idea .e{font-size:30px;line-height:1.2}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:2px solid var(--line);padding:10px 18px}
+.nav .in{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.nav .hint{font-size:16px;color:var(--ink2);text-align:center;flex:1}
+.nav .btn{margin:0}
+@media (max-width:640px){
+ body{font-size:18.5px} h1{font-size:28px} h2{font-size:23px} .lead{font-size:20px}
+ .beat{grid-template-columns:1fr;gap:8px}
+ .who{display:flex;align-items:center;gap:12px;text-align:left;padding:10px 14px}
+ .av{margin:0;width:46px;height:46px;font-size:21px;flex:none}
+ .opt{padding:16px} .opt .t{font-size:19.5px} .opt .s{font-size:18px}
+ .dayhead .em{font-size:38px}
+ .brand span{display:none}
+ .nav .hint{font-size:14.5px}
+}
+</style>
+</head>
+<body>
+<div id="testbar"></div>
+<header><div class="top"><div class="brand">Six Days at Riverside Market<span>Reflection 4 · Principles of Management</span></div><span class="pill" id="where">Start</span></div><div class="prog"><div id="progbar"></div></div></header>
+<main id="page" aria-live="polite"></main>
+<div class="nav" id="nav"><div class="in"><button class="btn ghost" id="back" type="button">‹ Back</button><span class="hint" id="hint"></span><button class="btn" id="next" type="button">Next ›</button></div></div>
+<script>
+var DATA = {"people": {"brian": {"name": "Brian", "job": "Store manager", "note": "your boss", "color": "#E9E3F7"}, "ashley": {"name": "Ashley", "job": "Cashier", "note": "18, part time", "color": "#DCEBFA"}, "dave": {"name": "Dave", "job": "Meat department manager", "note": "", "color": "#FFE2CC"}, "josh": {"name": "Josh", "job": "Night stock clerk", "note": "19", "color": "#DDF1E6"}, "rob": {"name": "Rob", "job": "Sales rep", "note": "Fresh Valley Farms", "color": "#FBF0C4"}, "lauren": {"name": "Lauren", "job": "Sales rep", "note": "VitaBright vitamins", "color": "#FADDE7"}, "maria": {"name": "Maria", "job": "Deli manager", "note": "", "color": "#DCEBFA"}}, "job": [["", "You are the new **assistant store manager** at Riverside Market in Manchester. Riverside is a family owned grocery chain in Connecticut. It is the same store from the Opening Day lesson."], ["brian", "Brian hired you two weeks ago. On your first day he said: \"This store runs on numbers. Help me hit them.\""], ["", "This week brings **six hard calls**, one each day, Monday to Saturday. Every choice costs something, even the strong ones."]], "days": [{"id": "mon", "n": 1, "day": "Monday", "time": "9:00 AM", "emoji": "💳", "title": "The card contest", "beats": [["brian", "Brian calls you into his office. \"Corporate wants **300 new Riverside Rewards credit cards** from our store by December 31. That is about 10 a day. Set up a contest for the cashiers. Your call how.\""], ["", "Every new card earns the store $40 from the bank that runs the card."], ["ashley", "The store has 22 cashiers. Most are part time. Ashley is 18. She works four evenings a week after school, and she needs her Saturdays off for her second job."]], "recap": ["brian", "Wants 300 new store credit cards by December 31. You design the cashier contest."], "question": "How do you set up the contest?", "options": [{"key": "A", "fit": "W", "title": "A daily leaderboard", "detail": "A board in the break room ranks every cashier by sign ups each day. Number 1 at the end wins $500. The bottom three work extra Saturdays.", "outcome": [["ashley", "By Thursday, Ashley is in last place. She is scared of losing her Saturdays. On Friday she starts signing up customers who only said \"sure, whatever\" while she bagged their groceries."], ["", "Two weeks later, a 71 year old customer calls the store, upset. A Riverside credit card he never asked for came in the mail. Three more customers call that week."]], "why": ["You tied a big prize and a punishment to one number, and only a few people could win. Scared people cut corners to make the number.", "This is **pressure**, one corner of the **fraud triangle**. Wells Fargo did the same with its \"Great 8\" quotas, and workers opened about 3.5 million accounts that customers never asked for."]}, {"key": "B", "fit": "W", "title": "$25 a card, no limit", "detail": "Every cashier earns $25 for each card they sign up. The register counts the sign ups. No other rules.", "outcome": [["", "Sign ups jump: 41 on the first Saturday. Nobody checks whether each customer really said yes."], ["brian", "By the third week, 14 customers have called to cancel cards they say they never asked for. The bank sends Brian a warning letter."]], "why": ["You paid for sign ups, so you got sign ups, not customers who wanted a card. And nothing checked the sign ups.", "An easy system with no checking is **opportunity**, another corner of the **fraud triangle**. The unit's short version: **you get what you measure**."]}, {"key": "C", "fit": "P", "title": "The leaderboard, plus a rule", "detail": "The same daily leaderboard and $500 prize, with a rule printed at the top: Only sign up customers who clearly say yes.", "outcome": [["", "The rule sits at the top of the poster. The leaderboard sits right under it, and the leaderboard is what everyone looks at."], ["ashley", "By the second week, two customers call about cards they did not want. Ashley tells you, \"We follow the rule. But you want the number.\""]], "why": ["A rule on a poster does not beat a prize on the wall. People do what gets rewarded.", "Enron had a 64 page **code of conduct** and set it aside when it got in the way. Words on paper work only when the rewards match them."]}, {"key": "D", "fit": "S", "title": "A team goal, plus a weekly check", "detail": "If the store reaches 300, every cashier gets $75. Each Friday you call five new card holders to make sure they wanted the card.", "outcome": [["", "Sign ups start slower, about 7 a day. On the first Friday, your five calls find one problem: a new cashier misread the screen and signed up a customer by mistake. You fix it together in five minutes."], ["brian", "By December 31 the store reaches 287 cards, 13 short of 300, with zero complaints. Brian can show corporate that every card is real, and he keeps the contest going in January."]], "why": ["You rewarded the whole team instead of a race, so nobody was scared of last place. And you checked the thing you really wanted: customers who chose the card.", "When you measure the right thing and check it, nobody has a reason to cut corners. **You get what you measure.**"]}], "strong": "A team goal with a weekly check: reward everyone when the store reaches 300, and call a few new card holders each week to make sure they wanted the card."}, {"id": "tue", "n": 2, "day": "Tuesday", "time": "6:15 AM", "emoji": "🥩", "title": "The top seller", "beats": [["dave", "Dave runs the meat department. It has had the best sales of all six Riverside stores, three months in a row. Brian, the store manager, calls Dave \"my MVP.\""], ["", "It is 6:15 AM. The store opens at 7. You walk past the meat case and stop."], ["dave", "Dave is peeling the stickers off packs of ground beef. The old \"sell by\" date is **yesterday**. He puts on new stickers with **tomorrow's** date."], ["dave", "He sees you. \"Relax. I've done this for years. It saves the store $200 a week.\""], ["rule", "Riverside code of conduct, page 4: Never change a date label."]], "recap": ["dave", "Is putting tomorrow's date on yesterday's ground beef. The code says: never change a date label."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Say nothing", "detail": "Dave's numbers carry the store, and Brian, the store manager, trusts him. It is his department.", "outcome": [["", "Three weeks later, a girl gets sick after eating tacos made with Riverside ground beef. The health department checks the store and finds packs with two date stickers, one on top of the other."], ["brian", "The story is on the Hartford news. Brian asks the staff who knew. Two stock clerks say everyone knew."]], "why": ["What a manager lets slide becomes the real rule. Every worker who saw it learned that the code does not apply to stars.", "This is **tone at the top**: what leaders reward, allow, and punish when the rules get in the way. Enron's board set its own code aside, twice, for its star finance chief."]}, {"key": "B", "fit": "W", "title": "Tell Dave to stop from now on", "detail": "Ask him not to do it again. The packs he already relabeled stay on the shelf.", "outcome": [["dave", "Dave nods. \"Sure, sure.\" The 18 relabeled packs sell by noon."], ["", "You do not know if he stops. Nothing is written down. Nobody else knows anything happened."]], "why": ["You hoped Dave would change, but you let old meat reach customers that day. And nothing in the store changed: no record, no report, no follow up.", "The unit's first big idea: **good intentions are not a system**. Ethics has to be built into how the store runs, not left to one person on one hard day."]}, {"key": "C", "fit": "P", "title": "Pull the packs, keep it quiet", "detail": "Take the relabeled packs off the shelf now. Have a quiet word with Dave. Keep it between the two of you.", "outcome": [["dave", "The packs come off the shelf. Dave says, \"Fine, fine.\""], ["josh", "Two weeks later, Josh sees Dave do it again on a Sunday. Josh says nothing. \"It's Dave. Nothing happens to Dave.\""]], "why": ["You protected customers that morning, and that mattered. But the rule bent quietly for the star, and people noticed.", "Real ethics programs **enforce the rules even against stars**. If they do not, everyone learns what the real rule is."]}, {"key": "D", "fit": "S", "title": "Pull the packs and tell Brian", "detail": "Take the relabeled packs off the shelf now. Tell Brian, the store manager, this morning, and say it plainly: the rule has to apply to Dave too.", "outcome": [["brian", "Brian is quiet for a long time. Then he calls Dave in. Dave gets a written warning and has to retake food safety training."], ["brian", "At the 10 AM meeting, Brian tells the meat team: \"Nobody changes a date label. Nobody.\""], ["dave", "Dave is cold to you for a month. Meat sales dip 3%. Nobody gets sick."]], "why": ["The rule held, even for the star. Everyone in the store saw what happened, and that teaches more than any poster.", "This is **tone at the top** working: what leaders do when a rule is inconvenient is the real code."]}], "strong": "Pull the relabeled packs and tell the store manager the same morning. The rule has to apply to the top seller too."}, {"id": "wed", "n": 3, "day": "Wednesday", "time": "9:04 PM", "emoji": "🧊", "title": "The 9 PM text", "beats": [["josh", "Josh stocks shelves at night. He is 19 and started six weeks ago. He is quiet and rarely speaks up."], ["", "You are at home. Your phone buzzes."], ["sms", "sorry to bug u. freezer in aisle 9 says 28 degrees. ice cream is kinda soft. probably nothing? night lead said not to call u"], ["rule", "Store rule: frozen food must stay at 0°F or colder. If it warms up, a manager decides what gets thrown out."]], "recap": ["josh", "Texted you at 9:04 PM: the aisle 9 freezer reads 28 degrees, and the night lead told him not to call you."], "question": "What do you text back?", "options": [{"key": "A", "fit": "S", "title": "Thank him and act tonight", "detail": "\"Thank you for telling me. You did the right thing. Move the ice cream to the back freezer. I'm calling the repair line now. Send me a photo of the thermometer.\"", "outcome": [["josh", "Josh moves 140 cartons to the back freezer by 9:40 PM and sends the photo."], ["", "The repair tech arrives at 11:15 PM. A fan motor died. You throw out 12 cartons that got too soft. The other 128 are fine."], ["josh", "Thursday morning, you tell the night crew that Josh caught it. Over the next month, the night crew texts you twice more about small problems, early, while they are cheap to fix."]], "why": ["The night stock clerk was your **early warning**. You thanked him and acted fast, so the problem stayed small.", "Companies where people speak up early are healthier. Purdue's own sales reps reported abuse in writing in the first three years, and the company did not act. A warning is worth something only if someone acts on it."]}, {"key": "B", "fit": "W", "title": "Not after work hours", "detail": "\"Please don't text me after work. Write it in the maintenance log, and the morning crew will handle it.\"", "outcome": [["josh", "Josh writes it in the log at 9:15 PM. Nobody reads the log until 7 AM."], ["", "By morning the freezer reads 41°F. Everything inside is thrown out: $3,800 of food."], ["josh", "Josh never texts you again. In March, he does not mention the water leaking under the dairy case."]], "why": ["You pushed back on the messenger, so the messages stopped. A quiet staff is like a smoke detector with dead batteries.", "Healthy companies want warnings loud, early, and thanked. People **speak up** only where it is safe to do so."]}, {"key": "C", "fit": "P", "title": "Thanks, I'll check at 7", "detail": "\"Thanks Josh. Put a Do Not Sell sign on the freezer. I'll look at it first thing at 7 AM.\"", "outcome": [["josh", "Josh tapes up the sign. \"ok\""], ["", "At 7 AM the freezer reads 38°F. Everything inside is thrown out: $3,800. If the ice cream had moved the night before, almost all of it would have been fine."]], "why": ["You were kind to the night stock clerk, and that matters. He will tell you again. But you did not act on the warning that night.", "In the Purdue story, the warnings traveled up, but no change came back down. An **early warning** helps only when someone acts on it."]}, {"key": "D", "fit": "W", "title": "Ask the night lead", "detail": "\"Good catch. The night lead is in charge tonight, so check with him and let me know in the morning.\"", "outcome": [["", "The night lead tells Josh, \"It'll be fine. Don't make a big deal.\" Nobody moves the ice cream."], ["", "At 7 AM the freezer reads 38°F. $3,800 of food is thrown out."], ["josh", "Josh learns that speaking up goes nowhere. He went around the night lead once. He will not do it again."]], "why": ["The night stock clerk came to you because the first channel had already failed: the night lead told him not to call. You sent him back to the person who blocked him.", "Reporting inside the company comes first, but only when the inside channel works. When it fails, the warning has to **go around it**."]}], "strong": "Thank him and act that night: move the ice cream, call the repair line, and tell the crew who caught it."}, {"id": "thu", "n": 4, "day": "Thursday", "time": "2:30 PM", "emoji": "🎟️", "title": "Concert tickets", "beats": [["brian", "Brian asked you to help pick the store's produce supplier for next year: **Fresh Valley Farms** or **Green Acres Produce**. The deal is worth $900,000 a year. Your price and quality comparison is due Monday."], ["rob", "Rob, from Fresh Valley Farms, stops by your office with a smile."], ["rob", "\"Two tickets to Saturday's sold out concert at the XL Center in Hartford. Floor seats, $380 each. Nobody at our office can use them. No strings.\""], ["rule", "Riverside code of conduct, page 6: Do not accept gifts worth more than $25 from a supplier. Tell your manager about any offer."]], "recap": ["rob", "Offered you two $380 concert tickets while you are comparing his company with Green Acres Produce."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Take the tickets", "detail": "You know yourself. You can enjoy one concert and still be fair on Monday.", "outcome": [["", "The concert is great. On Monday your numbers show Green Acres is a little cheaper on most items. But you find yourself writing that Fresh Valley \"feels more reliable.\""], ["brian", "Brian picks Fresh Valley. In June, Green Acres hears about the tickets and complains to Riverside's owners."]], "why": ["Nobody bribed you. Your judgment just leaned, quietly, toward the people who were nice to you. Most people never notice it happening.", "This is a **conflict of interest**. In the unit, 8 of 10 experts on an FDA panel had money ties to drug companies, and the panel advised against limiting how opioids could be marketed."]}, {"key": "B", "fit": "W", "title": "Take them, then pick the other supplier", "detail": "Go to the concert, then choose Green Acres on Monday, so nobody can say you were bought.", "outcome": [["", "You go to the concert. On Monday you recommend Green Acres, even though Fresh Valley had better quality on 3 of 5 items."], ["rob", "Rob is angry and tells Brian, the store manager, about the tickets. Brian asks why he is hearing about them from Rob."]], "why": ["Your judgment still bent, just in the other direction. Once the gift was in the room, there was no way to show the choice was fair.", "That is why the situation itself is the **conflict of interest**, even when you mean well."]}, {"key": "C", "fit": "P", "title": "Say no, keep it quiet", "detail": "Turn down the tickets. Nothing happened, so there is nothing to report.", "outcome": [["", "On Monday you give a fair comparison."], ["rob", "In March, Rob mentions to Brian, the store manager, \"Your assistant manager turned down my concert tickets.\""], ["brian", "Brian asks why you never told him. You did nothing wrong, but now he wonders what else he does not know."]], "why": ["Saying no was right. But the code asks you to report every offer, so the decision stays clean in everyone's eyes.", "The unit's fix for a **conflict of interest** is two words: **disclose** (say it out loud) and **recuse** (step out of the decision). You did the first half of the right thing."]}, {"key": "D", "fit": "S", "title": "Say no, tell Brian, step back", "detail": "Turn down the tickets. Tell Brian, the store manager, about the offer today, in writing. Offer to let someone else make the final pick.", "outcome": [["rob", "Rob shrugs. \"Your loss.\""], ["brian", "Brian thanks you for the note. You still do the price comparison, but Brian makes the final pick himself."], ["brian", "He adds a line to the store rules: every supplier offer gets written down. In February a box of apples arrives for the break room. Under $25. Written down."]], "why": ["You said it out loud and stepped back from the decision. Nobody can question the pick, not even you.", "This is the two word fix from the unit for a **conflict of interest**: **disclose and recuse**."]}], "strong": "Say no, tell the store manager in writing the same day, and step back from the final pick."}, {"id": "fri", "n": 5, "day": "Friday", "time": "10:00 AM", "emoji": "💊", "title": "The vitamin sign", "beats": [["lauren", "Lauren, from VitaBright vitamins, brings a big sign for the vitamin aisle. It says: **DOCTOR PROVEN · Cuts colds in HALF!**"], ["lauren", "You ask what the proof is. She hands you one page about the study."], ["study", "The study: **38 college students**. **Two weeks**. **Paid for by VitaBright**. The 19 students who took the vitamin had 2 colds in total. The 19 who did not had 4."], ["brian", "Brian walks by. \"Cold season. This sign will sell. Put it up.\""], ["", "You are in charge of the health aisle displays."]], "recap": ["lauren", "Wants a DOCTOR PROVEN · Cuts colds in HALF! sign. The proof: one study, 38 students, two weeks, paid for by her company."], "question": "What do you do with the sign?", "options": [{"key": "A", "fit": "W", "title": "Put it up", "detail": "A real study found it. The sign is true.", "outcome": [["", "VitaBright sales triple in December."], ["", "In January, a customer writes to the Connecticut Attorney General. She spent $90 on VitaBright for her family because the sign said doctor proven. All four of them caught colds anyway."], ["brian", "The Attorney General's office sends Brian a letter asking for the proof behind the sign."]], "why": ["The study was real, but tiny: 38 students, two weeks, paid for by the company. The sign made it sound proven for everyone.", "**A true finding, lifted out of its context, can do the work of a lie.** Purdue's \"less than 1%\" addiction claim came from a five sentence letter about hospital patients."]}, {"key": "B", "fit": "W", "title": "Put it up and let customers decide", "detail": "Customers can look up the study if they care. Adults make their own choices.", "outcome": [["", "Nobody looks up the study. Shoppers read the big words: DOCTOR PROVEN."], ["", "Sales triple. In January, three customers ask the pharmacist why the vitamins did not work."]], "why": ["The law does not ask whether a shopper could dig up the truth. It asks whether a regular shopper would be misled by the sign.", "This is the **reasonable consumer standard**. A regular shopper reads \"doctor proven\" and believes it."]}, {"key": "C", "fit": "P", "title": "Put it up and add small print", "detail": "Hang the sign and add a small line at the bottom: Based on one small study.", "outcome": [["", "The small line sits at knee height. Shoppers read the big words. Sales triple."], ["", "One customer asks you, \"So does it cut colds in half or not?\" You do not have a good answer."]], "why": ["Small print does not fix a big claim. What counts is what a regular shopper walks away believing, and that comes from the big words.", "Under the **reasonable consumer standard**, the headline is the message."]}, {"key": "D", "fit": "S", "title": "Ask for an honest sign", "detail": "Do not hang it. Ask for a sign that says only what the study found and who was in it, or no health claim at all.", "outcome": [["lauren", "Lauren is annoyed, but two days later she sends a new sign: Vitamin C and zinc. Studied in 38 college students."], ["brian", "Brian grumbles. \"Less exciting.\" Sales go up 20%, not 300%. No letters. No complaints."]], "why": ["You kept the claim the same size as the evidence. A sign can be persuasive and still be honest.", "When a product touches health, **telling the truth about it is the floor**, not a bonus."]}], "strong": "Do not hang the stretched sign. Ask for one that says only what the study found and who was in it."}, {"id": "sat", "n": 6, "day": "Saturday", "time": "6:40 PM", "emoji": "🥪", "title": "Everyone does it", "beats": [["maria", "Maria runs the deli. You may remember her from the Opening Day lesson: this is the job she applied for."], ["", "It is the busiest Saturday of the year. The deli is short two people. One called out sick. One quit on Thursday."], ["rule", "Food safety rule: the meat slicer is taken apart and cleaned every 4 hours. Each cleaning gets a signature on the cleaning log. The state inspector checks the log."], ["", "The 2 PM and 6 PM cleanings did not happen. There has been a line of 20 customers all afternoon."], ["maria", "Maria holds out the log and a pen. \"Just sign the two lines. **Everyone does it** on a day like this. The inspector only checks signatures. **Nobody gets hurt.** It's **just this once**.\""]], "recap": ["maria", "Wants you to sign the slicer cleaning log for two cleanings that did not happen."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Sign the two lines", "detail": "Just this once. Maria is drowning, and you are her manager. Help her out.", "outcome": [["maria", "You sign. The next Saturday the deli is short again. Maria does not ask this time. She signs the lines herself. \"You did it last week.\""], ["", "By January, the log is filled in once at the end of each shift, every line at once, in the same pen."]], "why": ["Listen to the sentences: \"Everyone does it.\" \"Nobody gets hurt.\" \"Just this once.\" These are **rationalizations**, the stories people tell themselves so a bad choice feels normal.", "The unit's test: **if you keep needing to explain why it is fine, it is not fine.**"]}, {"key": "B", "fit": "W", "title": "Let Maria sign it", "detail": "Tell her to sign it herself. You did not see anything.", "outcome": [["maria", "Maria signs. You walk away."], ["", "Two weeks later, a state inspector swabs the slicer and finds listeria, a germ that can make people very sick. The deli closes for three days."], ["maria", "The log shows Maria's signatures at times the slicer was never cleaned. Maria is fired. You are not. But you saw it."]], "why": ["Looking away is still a choice. The deli manager had pressure (too few people), opportunity (a log nobody checks), and a story (\"everyone does it\"). You left all three standing.", "Pressure, opportunity, and rationalization together are the **fraud triangle**. Remove any one corner, and most fraud never happens."]}, {"key": "C", "fit": "P", "title": "Refuse and walk away", "detail": "Do not sign. Tell Maria the slicer has to be cleaned now, then go back to the front registers.", "outcome": [["maria", "Maria cleans the slicer alone while 14 customers wait. Two of them leave angry. She writes the true time on the log: 6:55 PM."], ["maria", "She is furious with you. The next Saturday she is short again. Nothing about the schedule has changed."]], "why": ["You refused to lie, and that was right. But you left the deli manager alone with the same pressure that made her ask.", "Fix the pressure too, or the same moment comes back next week. That is how the **fraud triangle** works: take away a corner, and most fraud never happens."]}, {"key": "D", "fit": "S", "title": "Refuse and clean it together", "detail": "Do not sign. Stop the slicer for 20 minutes and clean it with Maria. Write the true time. On Monday, ask Brian, the store manager, for one more Saturday deli worker.", "outcome": [["", "You put up a sign: Fresh sliced meats back at 7:05. Some customers grumble. Most wait."], ["maria", "You and Maria clean the slicer in 18 minutes. The log is honest: 6:58 PM, cleaned late, short staffed."], ["brian", "On Monday, Brian adds a Saturday deli shift."]], "why": ["You said no to the lie, and you fixed the pressure behind it. An honest log plus enough people removes two corners of the **fraud triangle**.", "And notice: you never had to explain to yourself why it was fine."]}], "strong": "Do not sign. Clean the slicer with the deli manager, write the true time, and ask the store manager for one more Saturday worker."}], "refl": [{"key": "r1", "title": "What gets counted", "emoji": "🔢", "example": ["Kayla is in 10th grade. Her English teacher gives a prize each month to the student who logs the most reading minutes.", "By the second week, some of Kayla's friends log minutes while the book sits closed on the bed. Nobody checks.", "The teacher counted **minutes**, so she got minutes, not reading."], "ask": "Think of a time a number, a score, or a reward pushed you, or people around you, to cut a corner. School, a sports team, a game, your family, a job, or a news story all count.", "steps": ["What was being counted?", "What corner got cut, and by whom?", "If you made the rule, what would you count or check instead?"], "ideas": "pressure, you get what you measure, the fraud triangle"}, {"key": "r2", "title": "Saying it out loud", "emoji": "🗣️", "example": ["Marcus is 16 and swims on a summer team. He sees the assistant coach let one swimmer skip the deep water safety test. The swimmer is the coach's nephew.", "Marcus thinks, \"Not my business. Everybody likes Coach.\" He says nothing.", "Two weeks later, the swimmer panics in the deep end, and a lifeguard has to pull him out."], "ask": "Think of a time you saw something that was not right and had to decide whether to say something. School, a team, friends, family, online, or a job all count. It is fine if you stayed quiet. Honest answers earn the points.", "steps": ["What happened, and where?", "What made it hard, or easy, to speak up?", "Which idea from this unit helps you see it differently now?"], "ideas": "speaking up early, conflict of interest, rationalization, tone at the top", "fallback": "Nothing comes to mind? Pick the day in this simulation that would be hardest for you, and explain what would make it hard for you, with a moment from your own life."}], "ideas": [["💳", "You get what you measure", "Reward the team, and check the thing you really want."], ["🥩", "Tone at the top", "The rules have to apply to the stars too."], ["🧊", "Speaking up early", "Thank the messenger, then act."], ["🎟️", "Conflict of interest", "Disclose and recuse: say it out loud, and step out of the decision."], ["💊", "Honest marketing", "Keep the claim the same size as the evidence."], ["🥪", "Rationalization", "If you keep explaining why it is fine, it is not fine."]]};
+var CONFIG = {"SALT1": "northline-ctstate-2026", "ACTIVITY": "RCE-BMGT4", "VERSION": "r4-2026-11-16a", "SECTION": "11236", "DUE": "2026-12-06T23:59:00-05:00", "DUE_TEXT": "Sunday, December 6, 11:59 PM", "CLOSE": "2026-12-07T23:59:00-05:00", "CLOSE_TEXT": "Monday, December 7, 11:59 PM", "ENDPOINT": "https://script.google.com/macros/s/AKfycbyLR93lWGX5ypNLlGLK7nu86LXTaVbEE35jzG5wfNb75NHgoDvHyOkTjPsgoDZI-wrdqQ/exec"};
+var QS = (function(){ try { return new URLSearchParams(location.search); } catch(e){ return {get:function(){ return null; }}; } })();
+var TEST = QS.get('test') === '1';
+if (TEST) CONFIG.ACTIVITY += '-TEST';
+var STORE_KEY = 'r4_' + CONFIG.ACTIVITY;
+var SV = 'r4s1';
+var MINW = 60;
+var PTS = {S:1, P:0.5, W:0};
+var FITLABEL = {S:'Strong move', P:'Partly there', W:'Weak move'};
+var FITPTS = {S:'1 point', P:'½ point', W:'0 points'};
+var OPT_BG = ['#E9E3F7', '#DCEBFA', '#FBF0C4', '#FFE2CC'];
+var LETTERS = ['A', 'B', 'C', 'D'];
+var DUE = new Date(CONFIG.DUE).getTime(), CLOSE = new Date(CONFIG.CLOSE).getTime();
+
+/* ================= HELPERS ================= */
+var $ = function(s, r){ return (r || document).querySelector(s); };
+var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'}[c]; }); }
+function fmt(s){ return esc(s).replace(/\*\*(.+?)\*\*/g, '<b class="kw">$1</b>'); }
+function words(s){ var m = String(s || '').trim().match(/\S+/g); return m ? m.length : 0; }
+function onClick(sel, fn){ var el = $(sel); if (el) el.addEventListener('click', fn); }
+async function sha256Hex(text){ var buf = new TextEncoder().encode(text); var hash = await crypto.subtle.digest('SHA-256', buf); return Array.from(new Uint8Array(hash)).map(function(b){ return b.toString(16).padStart(2, '0'); }).join(''); }
+async function postOnce(payload, timeoutMs){
+  if (!CONFIG.ENDPOINT || CONFIG.ENDPOINT.indexOf('http') !== 0) return {ok:false, error:'no_endpoint'};
+  var ctrl = new AbortController(); var t = setTimeout(function(){ ctrl.abort(); }, timeoutMs || 45000);
+  try { var res = await fetch(CONFIG.ENDPOINT, {method:'POST', body:JSON.stringify(payload), signal:ctrl.signal, credentials:'omit', cache:'no-store'}); var text = await res.text(); try { return JSON.parse(text); } catch(e){ return {ok:false, error:'bad_response'}; } }
+  catch(e){ return {ok:false, error:(e && e.name === 'AbortError') ? 'timeout' : 'network'}; }
+  finally { clearTimeout(t); }
+}
+async function post(payload, timeoutMs){ var r = null; for (var a = 0; a < 3; a++){ r = await postOnce(payload, timeoutMs); if (r && (r.ok || (r.error !== 'timeout' && r.error !== 'network' && r.error !== 'bad_response'))) return r; await new Promise(function(res){ setTimeout(res, 1200 + a * 800); }); } return r; }
+function normalizeId(raw){ return String(raw || '').replace(/\D/g, ''); }
+function shortId(h){ return h ? String(h).slice(0, 6).toUpperCase() : ''; }
+function half(x){ x = Math.round(Number(x) * 2) / 2; var w = Math.floor(x), f = x - w; if (!w && !f) return '0'; return (w ? String(w) : '') + (f ? '½' : ''); }
+function when(iso){ var d = new Date(iso); return isNaN(d) ? String(iso || '') : d.toLocaleString([], {weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'}); }
+function isClosed(){ return Date.now() > CLOSE; }
+function isLate(){ return Date.now() > DUE; }
+function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
+function optOf(di, key){ var os = DATA.days[di].options; for (var i = 0; i < os.length; i++){ if (os[i].key === key) return os[i]; } return null; }
+function fitOf(di, key){ var o = optOf(di, key); return o ? o.fit : null; }
+function dayIndexById(id){ for (var i = 0; i < DATA.days.length; i++){ if (DATA.days[i].id === id) return i; } return -1; }
+function pointsFromPaths(paths){ var t = 0; (paths || []).forEach(function(p){ var di = dayIndexById(p && p[0]); if (di >= 0){ var f = fitOf(di, p[1]); if (f) t += PTS[f]; } }); return t; }
+function myPaths(){ return st.picks.map(function(p, i){ return [DATA.days[i].id, p.locked, fitOf(i, p.locked), st.order[i].join('')]; }); }
+
+/* ================= SCREENS AND STATE ================= */
+var SCREENS = [{t:'welcome'}, {t:'how'}, {t:'points'}, {t:'privacy'}, {t:'job'}];
+DATA.days.forEach(function(d, i){ SCREENS.push({t:'scene', d:i}, {t:'choose', d:i}, {t:'out', d:i}); });
+SCREENS.push({t:'ref', r:0}, {t:'ref', r:1}, {t:'finish'}, {t:'result'});
+function idxOf(t){ for (var i = 0; i < SCREENS.length; i++){ if (SCREENS[i].t === t) return i; } return 0; }
+var st;
+function fresh(){
+  return {sv:SV, i:0, view:'pages', understood:false,
+    cls:{mode:null, h1:null, tail:'', recordId:null, startedAt:null, submitted:null, submitError:null, submitting:false},
+    order:DATA.days.map(function(d){ return shuffle(d.options.map(function(o){ return o.key; })); }),
+    picks:DATA.days.map(function(){ return {pending:null, locked:null, at:null}; }),
+    r:['', ''], form:null, look:null};
+}
+function save(){
+  var raw; try { var o = {}; Object.keys(st).forEach(function(k){ if (k !== 'form' && k !== 'look') o[k] = st[k]; }); raw = JSON.stringify({sv:SV, t:Date.now(), st:o}); } catch(e){ return; }
+  try { sessionStorage.setItem(STORE_KEY, raw); } catch(e){}
+  try { if (st.cls && st.cls.submitted && st.cls.submitted.ok) localStorage.removeItem(STORE_KEY); else localStorage.setItem(STORE_KEY, raw); } catch(e){}
+}
+function readStore(store, maxAgeMs){ try { var raw = store.getItem(STORE_KEY); if (!raw) return null; var o = JSON.parse(raw); if (!o || o.sv !== SV || !o.st || !o.st.picks || o.st.picks.length !== DATA.days.length) return null; if (maxAgeMs && (!o.t || Date.now() - o.t > maxAgeMs)) return null; return o; } catch(e){ return null; } }
+function restore(){
+  var o = null; try { o = readStore(sessionStorage, 0); } catch(e){} if (!o){ try { o = readStore(localStorage, 30 * 24 * 3600 * 1000); } catch(e){} } if (!o) return false;
+  st = o.st; st.cls.submitting = false; st.view = 'pages'; st.form = null; st.look = null; if (st.cls.submitError === 'no_endpoint') st.cls.submitError = null; return true;
+}
+function signedIn(){ return !!(st && st.cls && st.cls.mode === 'in'); }
+function allLocked(){ return st.picks.every(function(p){ return !!p.locked; }); }
+function allDone(){ return allLocked() && words(st.r[0]) >= MINW && words(st.r[1]) >= MINW; }
+
+/* ================= PIECES ================= */
+function personBox(id){ var p = DATA.people[id]; if (!p) return ''; return '<div class="who"><div class="av" style="background:' + p.color + '" aria-hidden="true">' + esc(p.name.charAt(0)) + '</div><div><div class="nm">' + esc(p.name) + '</div><div class="jt">' + esc(p.job) + '</div>' + (p.note ? '<div class="jt2">' + esc(p.note) + '</div>' : '') + '</div></div>'; }
+function beatHTML(b){
+  var who = b[0], text = b[1];
+  if (who === 'rule') return '<div class="beat solo"><div class="say rule"><span class="lbl">📘 The rule</span>' + fmt(text) + '</div></div>';
+  if (who === 'study') return '<div class="beat solo"><div class="say study"><span class="lbl">🔬 The study</span>' + fmt(text) + '</div></div>';
+  if (who === 'sms') return '<div class="beat solo"><div class="phone"><div class="from">📱 Text from <b>Josh</b>, night stock clerk · 9:04 PM</div><div class="bubble">' + esc(text) + '</div></div></div>';
+  if (!who) return '<div class="beat solo"><div class="say plain">' + fmt(text) + '</div></div>';
+  return '<div class="beat">' + personBox(who) + '<div class="say">' + fmt(text) + '</div></div>';
+}
+function beats(list){
+  var out = [], prev = null;
+  (list || []).forEach(function(b){
+    var person = !!DATA.people[b[0]];
+    if (person && prev && prev[0] === b[0]) prev[1].push(b[1]);
+    else { prev = person ? [b[0], [b[1]]] : null; out.push(person ? prev : b); }
+  });
+  return out.map(function(b){ return Array.isArray(b[1]) ? '<div class="beat">' + personBox(b[0]) + '<div class="say">' + b[1].map(function(t){ return '<p>' + fmt(t) + '</p>'; }).join('') + '</div></div>' : beatHTML(b); }).join('');
+}
+function dayHead(di, sub, title){ var d = DATA.days[di]; return '<div class="dayhead"><span class="em" aria-hidden="true">' + d.emoji + '</span><div><span class="tag">' + esc(sub) + '</span><h1>' + esc(title) + '</h1></div></div>'; }
+function fitPill(f, small){ return f ? '<span class="fit ' + f + (small ? ' small' : '') + '">' + FITLABEL[f] + ' · ' + FITPTS[f] + '</span>' : ''; }
+function summaryHTML(paths, texts){
+  var h = '<h2>Your six choices</h2>';
+  DATA.days.forEach(function(d, i){
+    var p = null; (paths || []).forEach(function(x){ if (x && x[0] === d.id) p = x; });
+    var o = p ? optOf(i, p[1]) : null;
+    h += '<div class="sumrow"><div><div class="d">' + d.emoji + ' Day ' + d.n + ' · ' + esc(d.title) + '</div><div class="c">' + (o ? 'You chose: ' + esc(o.title) : 'No choice saved') + '</div></div>' + (o ? fitPill(o.fit, true) : '') + '</div>';
+  });
+  DATA.refl.forEach(function(r, k){ var t = texts && texts[r.key]; h += '<h2>' + r.emoji + ' Reflection ' + (k + 1) + ' · ' + esc(r.title) + '</h2><div class="quote">' + (t ? esc(t) : '<i>Nothing saved.</i>') + '</div>'; });
+  return h;
+}
+function ideasHTML(){ return '<div class="card lav"><span class="tag">The six ideas, one line each</span>' + DATA.ideas.map(function(x){ return '<div class="idea"><span class="e" aria-hidden="true">' + x[0] + '</span><div><b>' + esc(x[1]) + '.</b> ' + esc(x[2]) + '</div></div>'; }).join('') + '</div>'; }
+
+/* ================= RENDER ================= */
+function go(n){ st.i = Math.max(0, Math.min(SCREENS.length - 1, n)); st.view = 'pages'; save(); render(); window.scrollTo(0, 0); }
+function whereLabel(sc){
+  if (sc.t === 'welcome' || sc.t === 'how' || sc.t === 'points' || sc.t === 'privacy') return 'Getting ready';
+  if (sc.t === 'job') return 'Your new job';
+  if (sc.d != null) return 'Day ' + (sc.d + 1) + ' of 6';
+  if (sc.t === 'ref') return 'Reflection ' + (sc.r + 1) + ' of 2';
+  return {finish:'Save', result:'Your result'}[sc.t] || '';
+}
+function render(){
+  if (st.view === 'signin') return renderSignin();
+  if (st.view === 'lookup') return renderLookup();
+  var sc = SCREENS[st.i], h = '';
+  $('#progbar').style.width = Math.round(st.i / (SCREENS.length - 1) * 100) + '%';
+  $('#where').textContent = whereLabel(sc);
+  if (sc.t === 'welcome') h = welcomeHTML();
+  else if (sc.t === 'how') h = howHTML();
+  else if (sc.t === 'points') h = pointsHTML();
+  else if (sc.t === 'privacy') h = privacyHTML();
+  else if (sc.t === 'job') h = '<span class="tag">Before Monday</span><h1>Your new job</h1>' + beats(DATA.job);
+  else if (sc.t === 'scene') h = sceneHTML(sc.d);
+  else if (sc.t === 'choose') h = chooseHTML(sc.d);
+  else if (sc.t === 'out') h = outHTML(sc.d);
+  else if (sc.t === 'ref') h = refHTML(sc.r);
+  else if (sc.t === 'finish') h = finishHTML();
+  else if (sc.t === 'result') h = resultHTML();
+  $('#page').innerHTML = h;
+  wire(sc);
+  updateNav();
+}
+function welcomeHTML(){
+  var h = '<span class="tag">Reflection 4 · Managing Ethics</span><h1>Six Days at Riverside Market</h1>' +
+    '<p class="lead">You are the new <b>assistant store manager</b> at a grocery store. Six days. Six hard calls. You choose, and you see what happens.</p>' +
+    '<div class="card butter"><p>📅 <b>Due ' + esc(CONFIG.DUE_TEXT) + '</b> Eastern.</p><p>⏱️ About <b>30 minutes</b>.</p><p>🎯 <b>10 points</b>. No job experience needed.</p></div>';
+  if (isClosed() && !signedIn()) h += '<div class="msg warn"><b>This simulation is closed.</b> The page closed ' + esc(CONFIG.CLOSE_TEXT) + '.</div>';
+  else h += '<p><button class="btn big" type="button" id="startBtn">' + (signedIn() ? 'Continue ›' : 'Start ›') + '</button></p>';
+  h += '<p><button class="btn soft" type="button" id="goLookup">Already finished? See your result</button></p>';
+  return h;
+}
+function howHTML(){
+  return '<span class="tag">Getting ready · 1 of 3</span><h1>How it works</h1>' +
+    '<div class="card sky"><ol class="steps">' +
+    '<li><b>Read the day.</b> Something happens at the store.</li>' +
+    '<li><b>Pick what you would do.</b> Tap an answer, then press <b>Lock in my answer</b>. After that, it cannot change.</li>' +
+    '<li><b>See what happens next</b>, and why.</li>' +
+    '<li><b>After Day 6</b>, write two short reflections about your own life. School, sports, family, friends, or a job all count.</li>' +
+    '<li>Press <b>Save my work</b> at the end.</li></ol></div>' +
+    '<p class="note">💾 You can close the tab and come back later on the same phone or computer. Your progress waits for you.</p>';
+}
+function pointsHTML(){
+  return '<span class="tag">Getting ready · 2 of 3</span><h1>How you earn 10 points</h1>' +
+    '<div class="card lav"><p class="big">🎯 <b>6 points</b> · your six choices</p><p>A strong move earns 1 point. A move that is partly there earns ½ point. The page counts these for you.</p><hr>' +
+    '<p class="big">✍️ <b>4 points</b> · your two reflections</p><p>Each reflection earns up to 2 points: <b>1 point</b> for a real, specific moment from your life, and <b>1 point</b> for one idea from the unit, used correctly. Professor Calafiore grades these and writes you feedback.</p></div>' +
+    '<p class="note">⏰ <b>Late work:</b> up to 24 hours late is 10% off. After ' + esc(CONFIG.CLOSE_TEXT) + ', the page closes and nothing can be saved.</p>';
+}
+function privacyHTML(){
+  var h = '<span class="tag">Getting ready · 3 of 3</span><h1>🔒 Your Student ID stays private</h1>' +
+    '<div class="card sky"><ol class="steps">' +
+    '<li>You type your <b>Student ID</b>. It is the 8 digit number you log in to Blackboard with.</li>' +
+    '<li>This page <b>scrambles it right away</b>, on your own phone or computer, into a long jumble of letters and numbers.</li>' +
+    '<li>Professor Calafiore\'s private results system <b>scrambles it a second time</b>, with a secret key that only that system has.</li>' +
+    '<li>Only that <b>double scrambled code</b> is saved, with your choices, your writing, and the time.</li>' +
+    '<li>Your name is <b>never saved</b>. Your Student ID is never saved the way you typed it.</li>' +
+    '<li><b>Only Professor Calafiore</b> can match a code to a name. She does it on her own computer, with the class list from Blackboard.</li></ol></div>' +
+    '<div class="card butter"><p><b>Why ask for your ID at all?</b> So your points reach you in Blackboard, and so you can come back later and see your result and your feedback. Your result opens only with your Student ID, so keep it to yourself, like a password.</p></div>';
+  if (signedIn()) return h + '<div class="msg good">✅ <b>You are signed in.</b> Student ID ending in <b>' + esc(st.cls.tail) + '</b>. Press <b>Next</b>.</div>';
+  if (isClosed()) return h + '<div class="msg warn"><b>This simulation is closed.</b> The page closed ' + esc(CONFIG.CLOSE_TEXT) + '. <button class="btn soft" type="button" id="goLookup">See your result</button></div>';
+  return h + '<label class="agree"><input type="checkbox" id="agree"' + (st.understood ? ' checked' : '') + '><span>I read this. I understand my Student ID stays private.</span></label>' +
+    '<p><button class="btn big" type="button" id="goSign"' + (st.understood ? '' : ' disabled') + '>Sign in ›</button></p>' +
+    '<p><button class="btn soft" type="button" id="goLookup">Already finished? See your result</button></p>';
+}
+function sceneHTML(di){ var d = DATA.days[di]; return dayHead(di, 'Day ' + d.n + ' of 6 · ' + d.day + ' · ' + d.time, d.title) + beats(d.beats); }
+function chooseHTML(di){
+  var d = DATA.days[di], p = st.picks[di], h = dayHead(di, 'Day ' + d.n + ' · ' + d.day, d.question) + beats([d.recap]);
+  h += '<div role="group" aria-label="Your choices">';
+  st.order[di].forEach(function(key, pos){
+    var o = optOf(di, key), sel = (p.locked || p.pending) === key, dim = p.locked && p.locked !== key;
+    h += '<button type="button" class="opt' + (sel ? ' sel' : '') + (dim ? ' dim' : '') + '" data-k="' + key + '" aria-pressed="' + (sel ? 'true' : 'false') + '" style="background:' + OPT_BG[pos] + '"' + (p.locked ? ' disabled' : '') + '><span class="k">' + LETTERS[pos] + '</span><span><span class="t">' + esc(o.title) + '</span><span class="s">' + fmt(o.detail) + '</span></span></button>';
+  });
+  h += '</div><div class="lockrow">';
+  var letter = function(k){ return LETTERS[st.order[di].indexOf(k)]; };
+  if (p.locked) h += '<p>🔒 <b>Locked in: ' + letter(p.locked) + '.</b> Press <b>Next</b> to see what happens.</p>';
+  else if (p.pending) h += '<p>You picked <b>' + letter(p.pending) + '</b>. Tap another answer to change your mind, or lock it in.</p><button class="btn" type="button" id="lockBtn">Lock in my answer</button>';
+  else h += '<p>Tap the answer you would choose.</p><button class="btn" type="button" id="lockBtn" disabled>Lock in my answer</button>';
+  return h + '</div>';
+}
+function outHTML(di){
+  var d = DATA.days[di], p = st.picks[di];
+  if (!p.locked) return dayHead(di, 'Day ' + d.n + ' · what happened', d.title) + '<div class="msg info">Go back and lock in an answer first.</div>';
+  var o = optOf(di, p.locked);
+  var h = dayHead(di, 'Day ' + d.n + ' · what happened', d.title) + '<p>' + fitPill(o.fit) + '</p><p class="youchose">You chose: <b>' + esc(o.title) + '</b></p>' +
+    '<h2>What happened next</h2>' + beats(o.outcome) + '<h2>Why</h2><div class="card white why">' + o.why.map(function(w){ return '<p>' + fmt(w) + '</p>'; }).join('') + '</div>';
+  if (o.fit !== 'S') h += '<div class="card sky"><span class="tag">💡 The strong move here</span><p>' + fmt(d.strong) + '</p></div>';
+  return h;
+}
+function refHTML(k){
+  var r = DATA.refl[k], saved = !!(st.cls.submitted && st.cls.submitted.ok);
+  return '<span class="tag">Reflection ' + (k + 1) + ' of 2 · 2 points</span><h1>' + r.emoji + ' ' + esc(r.title) + '</h1>' +
+    '<div class="card butter"><span class="tag">An example first</span>' + r.example.map(function(x){ return '<p>' + fmt(x) + '</p>'; }).join('') + '</div>' +
+    '<div class="card lav"><p><b>Your turn.</b> ' + fmt(r.ask) + '</p><ol class="steps">' + r.steps.map(function(s){ return '<li>' + fmt(s) + '</li>'; }).join('') + '</ol>' + (r.fallback ? '<p class="note" style="margin-top:14px">' + fmt(r.fallback) + '</p>' : '') + '</div>' +
+    '<label for="ref" class="tag">Write here · at least ' + MINW + ' words</label><textarea id="ref" spellcheck="true"' + (saved ? ' readonly' : '') + '>' + esc(st.r[k]) + '</textarea><div class="counter" id="refCount"></div>' + (saved ? '<p class="note">✅ Saved. This is the version Professor Calafiore reads.</p>' : '') +
+    '<p class="note" style="margin-top:14px"><b>2 points:</b> a real, specific moment (1 point) and one idea from the unit, used correctly (1 point). Ideas you could use: ' + esc(r.ideas) + '.</p>';
+}
+function errMsg(e){ return {timeout:'The connection timed out.', network:'The connection failed. Check the Wi-Fi.', bad_response:'The results system did not answer clearly.', no_endpoint:'Saving is switched off on this copy of the page.', window_closed:'The page is closed, so this was not saved.', bad_id:'Your Student ID did not read correctly. Go back to the start and sign in again.', bad_activity:'This simulation is not open yet. Check Blackboard.'}[e] || ('Something went wrong (' + e + ').'); }
+function finishHTML(){
+  var c = st.cls;
+  var h = '<span class="tag">Save</span><h1>Check, then save</h1><ul class="checks">';
+  DATA.days.forEach(function(d, i){ var on = !!st.picks[i].locked; h += '<li class="' + (on ? 'on' : '') + '"><span class="box">' + (on ? '✓' : '') + '</span>Day ' + d.n + ' · ' + esc(d.title) + (on ? '' : ': not locked in yet') + '</li>'; });
+  [0, 1].forEach(function(k){ var w = words(st.r[k]), on = w >= MINW; h += '<li class="' + (on ? 'on' : '') + '"><span class="box">' + (on ? '✓' : '') + '</span>Reflection ' + (k + 1) + ' · ' + w + ' words' + (on ? '' : ' (at least ' + MINW + ')') + '</li>'; });
+  h += '</ul>';
+  if (!allDone()) h += '<div class="msg info"><b>Something is still missing.</b> Use Back to find the line without a check.</div>';
+  else if (!signedIn()) h += '<div class="msg warn"><b>You are not signed in</b>, so nothing can be saved. Go back to the start and sign in.</div>';
+  else if (c.submitted && c.submitted.ok) h += '<div class="msg good">✅ <b>Saved.</b> Press <b>Next</b> to see your result.</div>';
+  else if (isClosed()) h += '<div class="msg warn"><b>Closed.</b> The page closed ' + esc(CONFIG.CLOSE_TEXT) + '. This cannot be saved now.</div>';
+  else {
+    if (isLate()) h += '<div class="msg info">⏰ It is past the due date (' + esc(CONFIG.DUE_TEXT) + '). Up to 24 hours late is 10% off. You can still save until ' + esc(CONFIG.CLOSE_TEXT) + '.</div>';
+    h += '<p class="note">You can save <b>one time</b>. The first save is the one that counts.</p><p><button class="btn big" type="button" id="submitBtn"' + (c.submitting ? ' disabled' : '') + '>' + (c.submitting ? 'Saving… please wait' : 'Save my work ›') + '</button></p>';
+    if (c.submitError) h += '<div class="msg warn"><b>Not saved yet.</b> ' + esc(errMsg(c.submitError)) + ' Press Save again in a minute. If it keeps failing, take a screenshot of this page and email Professor Calafiore. Backup code: <b>B-' + esc(shortId(c.h1)) + '</b>.</div>';
+  }
+  return h;
+}
+function resultHTML(){
+  var c = st.cls, h = '<span class="tag">Your result</span><h1>Here is what you did</h1>';
+  if (c.submitted && c.submitted.ok){
+    h += '<div class="msg good">✅ <b>Recorded</b> on ' + esc(when(c.submitted.submittedAt || new Date().toISOString())) + '. Record ID <b>' + esc(shortId(c.recordId)) + '</b>.' + (c.submitted.already ? ' A result for this Student ID was already saved earlier, and the first one counts.' : '') + '</div><p class="note">📸 Take a screenshot of this page. It is your proof.</p>';
+  } else h += '<div class="msg info">Not saved yet. Go back and press <b>Save my work</b>.</div>';
+  h += '<div class="card sky"><p class="big">🎯 Your choices: <b>' + half(pointsFromPaths(myPaths())) + ' of 6 points</b></p><p>The page counted these.</p></div>' +
+    '<div class="card lav"><p class="big">✍️ Your reflections: <b>up to 4 points</b></p><p>Professor Calafiore grades them and writes you feedback. Your total appears in Blackboard. You can also come back to this page, press <b>See your result</b> on the first screen, and type your Student ID.</p></div>';
+  h += summaryHTML(myPaths(), {r1:st.r[0], r2:st.r[1]}) + '<h2>Keep these</h2>' + ideasHTML();
+  return h;
+}
+
+/* ================= WIRING ================= */
+function wire(sc){
+  if (sc.t === 'welcome'){ onClick('#startBtn', function(){ go(signedIn() ? Math.max(st.i, idxOf('job')) : 1); }); onClick('#goLookup', openLookup); }
+  if (sc.t === 'privacy'){
+    var ag = $('#agree'); if (ag) ag.addEventListener('change', function(){ st.understood = ag.checked; save(); var b = $('#goSign'); if (b) b.disabled = !ag.checked; });
+    onClick('#goSign', function(){ if (!st.understood) return; st.form = {id:'', confirm:false, err:''}; st.view = 'signin'; render(); window.scrollTo(0, 0); });
+    onClick('#goLookup', openLookup);
+  }
+  if (sc.t === 'choose'){
+    var di = sc.d, p = st.picks[di];
+    $$('[data-k]').forEach(function(b){ b.addEventListener('click', function(){ if (p.locked) return; p.pending = b.dataset.k; save(); render(); var lb = $('#lockBtn'); if (lb) lb.focus(); }); });
+    onClick('#lockBtn', function(){ if (!p.pending || p.locked) return; p.locked = p.pending; p.at = new Date().toISOString(); save(); render(); });
+  }
+  if (sc.t === 'ref'){
+    var k = sc.r, ta = $('#ref');
+    var upd = function(){ st.r[k] = ta.value; var w = words(ta.value); $('#refCount').innerHTML = w + ' words' + (w >= MINW ? ' <span class="ok">✓ enough</span>' : ' · at least ' + MINW); save(); updateNav(); };
+    ta.addEventListener('input', upd); upd();
+  }
+  if (sc.t === 'finish') onClick('#submitBtn', submitFinal);
+}
+function canNext(){
+  var sc = SCREENS[st.i];
+  if (sc.t === 'welcome') return false;
+  if (sc.t === 'privacy') return signedIn();
+  if (sc.t === 'choose') return !!st.picks[sc.d].locked;
+  if (sc.t === 'out') return !!st.picks[sc.d].locked;
+  if (sc.t === 'ref') return words(st.r[sc.r]) >= MINW;
+  if (sc.t === 'finish') return !!(st.cls.submitted && st.cls.submitted.ok);
+  if (sc.t === 'result') return false;
+  return true;
+}
+function updateNav(){
+  var sc = SCREENS[st.i], nav = $('#nav');
+  nav.style.display = (st.view !== 'pages' || sc.t === 'welcome') ? 'none' : '';
+  var nx = $('#next'), bk = $('#back'), hint = $('#hint');
+  bk.disabled = st.i === 0;
+  var ok = canNext(); nx.disabled = !ok;
+  nx.style.display = sc.t === 'result' || (sc.t === 'privacy' && !signedIn()) ? 'none' : '';
+  nx.textContent = sc.t === 'finish' ? 'See my result ›' : 'Next ›';
+  var hints = {choose:'Tap one, then lock it in.', ref:'At least ' + MINW + ' words.', finish:'Press Save my work.', privacy:'Check the box, then sign in.'};
+  hint.textContent = ok ? '' : (hints[sc.t] || '');
+}
+
+/* ================= SIGN IN / SUBMIT / LOOKUP ================= */
+function renderSignin(){
+  $('#nav').style.display = 'none';
+  $('#where').textContent = 'Sign in';
+  var f = st.form || (st.form = {id:'', confirm:false, err:''});
+  var h = '<span class="tag">Sign in</span><h1>Type your Student ID</h1>' +
+    '<div class="card white"><label for="sid"><b>The 8 digit number you log in to Blackboard with.</b></label><p class="note">It is your Student ID. It starts with 0, for example 03083452.</p>' +
+    '<input id="sid" class="field" inputmode="numeric" autocomplete="off" maxlength="14" value="' + esc(f.id) + '"' + (f.confirm ? ' readonly' : '') + '></div>';
+  if (f.err) h += '<div class="msg warn" role="alert">' + esc(f.err) + (f.already ? '<br><button type="button" class="btn soft" id="signLook">See your result</button>' : '') + '</div>';
+  if (!f.confirm) h += '<p><button type="button" class="btn big" id="signNext">Next ›</button> <button type="button" class="btn ghost" id="signBack">‹ Back</button></p>';
+  else { var d = normalizeId(f.id); h += '<div class="card butter"><p>You typed:</p><div class="bigid">' + esc(d.slice(0, 4) + ' ' + d.slice(4)) + '</div><p>Is this <b>your</b> Student ID? If it is wrong, your points go to no one.</p><p><button type="button" class="btn" id="signYes">Yes, that is me ›</button> <button type="button" class="btn soft" id="signFix">No, let me fix it</button></p></div>'; }
+  h += '<p class="note">🔒 Your number is scrambled on this device before anything is saved. Your name is never saved.</p>';
+  $('#page').innerHTML = h;
+  var sid = $('#sid'); if (sid){ sid.addEventListener('input', function(){ f.id = sid.value; }); if (!f.confirm) sid.focus(); }
+  if (sid) sid.addEventListener('keydown', function(e){ if (e.key === 'Enter' && !f.confirm){ var b = $('#signNext'); if (b) b.click(); } });
+  onClick('#signNext', function(){ var d = normalizeId(f.id); if (d.length !== 8){ f.err = 'Your Student ID has 8 digits. You typed ' + d.length + '.'; renderSignin(); return; } if (d.charAt(0) !== '0'){ f.err = 'Your Student ID starts with 0. Check the number and try again.'; renderSignin(); return; } f.err = ''; f.confirm = true; renderSignin(); });
+  onClick('#signFix', function(){ f.confirm = false; renderSignin(); });
+  onClick('#signBack', function(){ st.form = null; st.view = 'pages'; render(); });
+  onClick('#signYes', signIn);
+  onClick('#signLook', openLookup);
+}
+async function signIn(){
+  var f = st.form, btn = $('#signYes'), d = normalizeId(f.id);
+  if (isClosed()){ f.err = 'This simulation is closed. The page closed ' + CONFIG.CLOSE_TEXT + '.'; f.confirm = false; renderSignin(); return; }
+  btn.disabled = true; btn.textContent = 'One moment…';
+  var h1; try { h1 = await sha256Hex(CONFIG.SALT1 + '|' + d); } catch(e){ f.err = 'This browser could not scramble your number. Use Chrome, Safari, or Edge.'; f.confirm = false; renderSignin(); return; }
+  var r = await post({action:'start', h1:h1, section:CONFIG.SECTION, activity:CONFIG.ACTIVITY, clientVersion:CONFIG.VERSION}, 45000);
+  if (r && !r.ok && r.error === 'window_closed'){ f.err = 'This simulation is closed. The page closed ' + CONFIG.CLOSE_TEXT + '.'; f.confirm = false; renderSignin(); return; }
+  if (r && !r.ok && r.error === 'bad_activity'){ f.err = errMsg('bad_activity'); f.confirm = false; renderSignin(); return; }
+  if (r && r.ok && r.already){ f.err = 'A finished result for this Student ID is already saved, and the first one counts.'; f.already = true; f.confirm = false; renderSignin(); return; }
+  var c = st.cls; c.mode = 'in'; c.h1 = h1; c.tail = d.slice(-2); c.recordId = (r && r.ok && r.recordId) || null; c.startedAt = new Date().toISOString();
+  st.form = null; st.view = 'pages'; save(); go(idxOf('job'));
+}
+async function submitFinal(){
+  var c = st.cls; if (!signedIn() || c.submitting || (c.submitted && c.submitted.ok) || isClosed() || !allDone()) return;
+  c.submitting = true; c.submitError = null; save(); render();
+  var paths = myPaths();
+  var payload = {action:'submit', h1:c.h1, section:CONFIG.SECTION, activity:CONFIG.ACTIVITY, clientVersion:CONFIG.VERSION, startedAt:c.startedAt,
+    minutes:Math.max(0, Math.round((Date.now() - new Date(c.startedAt).getTime()) / 60000)),
+    paths:paths, texts:{r1:st.r[0], r2:st.r[1]},
+    checks:{choicePoints:pointsFromPaths(paths), picks:paths.map(function(x){ return x[0] + ':' + x[1] + ':' + x[2]; }).join(' '), lockedAt:st.picks.map(function(p){ return p.at; })}};
+  var r = await post(payload, 60000);
+  c.submitting = false;
+  if (r && r.ok){ c.submitted = r; c.recordId = r.recordId || c.recordId; c.submitError = null; } else c.submitError = (r && r.error) || 'network';
+  save(); render();
+}
+function openLookup(){ st.look = {id:'', out:''}; st.view = 'lookup'; render(); window.scrollTo(0, 0); }
+function renderLookup(){
+  $('#nav').style.display = 'none';
+  $('#where').textContent = 'Your result';
+  var f = st.look || (st.look = {id:'', out:''});
+  var h = '<span class="tag">See your result</span><h1>Type the same Student ID you used</h1>' +
+    '<div class="card white"><label for="lid"><b>The 8 digit number you log in to Blackboard with.</b></label><p class="note">It starts with 0.</p><input id="lid" class="field" inputmode="numeric" autocomplete="off" maxlength="14" value="' + esc(f.id) + '"></div>' +
+    '<p><button type="button" class="btn big" id="lookGo">Show me ›</button> <button type="button" class="btn ghost" id="lookBack">‹ Back</button></p><div id="lookOut">' + f.out + '</div>';
+  $('#page').innerHTML = h;
+  var lid = $('#lid'); lid.addEventListener('input', function(){ f.id = lid.value; });
+  lid.addEventListener('keydown', function(e){ if (e.key === 'Enter') $('#lookGo').click(); });
+  onClick('#lookBack', function(){ st.look = null; st.view = 'pages'; render(); });
+  onClick('#lookGo', async function(){
+    var d = normalizeId(f.id), btn = $('#lookGo');
+    if (d.length !== 8){ f.out = '<div class="msg warn">Your Student ID has 8 digits. You typed ' + d.length + '.</div>'; renderLookup(); return; }
+    btn.disabled = true; btn.textContent = 'Looking…';
+    var h1; try { h1 = await sha256Hex(CONFIG.SALT1 + '|' + d); } catch(e){ h1 = null; }
+    var r = h1 ? await post({action:'lookup', h1:h1, section:CONFIG.SECTION, activity:CONFIG.ACTIVITY, clientVersion:CONFIG.VERSION}, 45000) : null;
+    if (!r || !r.ok){ f.out = '<div class="msg warn">' + esc(r && r.error === 'bad_activity' ? errMsg('bad_activity') : 'Could not reach the results system. Check the Wi-Fi and try again.') + '</div>'; renderLookup(); return; }
+    if (!r.found){ f.out = '<div class="msg info"><b>No record</b> for this Student ID. Check the number. If you finished and saved, email Professor Calafiore with the date and time you saved.</div>'; renderLookup(); return; }
+    var x = r.found;
+    if (!x.submittedAt){ f.out = '<div class="msg info"><b>Started</b> on ' + esc(when(x.startedAt)) + ', but <b>not saved yet</b>. Finish it and press Save my work before ' + esc(CONFIG.CLOSE_TEXT) + '.</div>'; renderLookup(); return; }
+    var top = '<div class="msg good">✅ <b>Recorded</b> on ' + esc(when(x.submittedAt)) + '. Record ID <b>' + esc(x.recordId) + '</b>.</div>';
+    var graded = x.score !== null && x.score !== undefined && x.score !== '';
+    var grade = graded
+      ? '<div class="card butter"><span class="tag">Your score</span><p class="big"><b>' + esc(x.score) + ' out of 10</b></p>' + (x.feedback ? '<p><b>Feedback from Professor Calafiore</b></p><div class="quote">' + esc(x.feedback) + '</div>' : '') + '</div>'
+      : '<div class="card sky"><p class="big">🎯 Your choices: <b>' + half(pointsFromPaths(x.paths)) + ' of 6 points</b></p><p>Your reflections are not graded yet. Your total and feedback will appear here and in Blackboard.</p></div>';
+    f.out = top + grade + summaryHTML(x.paths || [], x.texts || {});
+    renderLookup();
+  });
+}
+
+/* ================= BOOT ================= */
+if (!CONFIG.ENDPOINT) $('#testbar').innerHTML = '<div class="testbar">PREVIEW COPY · nothing is saved on this copy</div>';
+else if (TEST) $('#testbar').innerHTML = '<div class="testbar">TEST MODE · saves go to ' + esc(CONFIG.ACTIVITY) + ', not to real grades</div>';
+if (!restore()) st = fresh();
+$('#next').addEventListener('click', function(){ if (canNext()) go(st.i + 1); });
+$('#back').addEventListener('click', function(){ if (st.i > 0) go(st.i - 1); });
+render();
+</script>
+</body>
+</html>

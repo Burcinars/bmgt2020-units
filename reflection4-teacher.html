@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Reflection 4 · Six Days at Riverside Market · Instructor page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fg:#111418;--ink2:#2a2f3a;--muted:#454b57;--line:#d6d2c8;--soft:#f3f1ec;--lav:#E9E3F7;--sky:#DCEBFA;--butter:#FBF0C4;--peach:#FFE2CC;--mint:#DDF1E6;--kw:#3b2a8c}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--fg);font-family:'Lexend','Avenir Next',Avenir,Verdana,sans-serif;font-size:18px;line-height:1.65;letter-spacing:.015em}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 20px 80px}
+h1{font-size:30px;margin:4px 0 6px}
+h2{font-size:22px;margin:0 0 10px}
+.tag{display:inline-block;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.note{font-size:16.5px;color:var(--ink2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin:16px 0}
+.card{border-radius:16px;padding:18px 20px;background:var(--soft);margin:0}
+.card.lav{background:var(--lav)}.card.sky{background:var(--sky)}.card.butter{background:var(--butter)}.card.peach{background:var(--peach)}.card.mint{background:var(--mint)}.card.white{background:#fff;border:2px solid var(--line)}
+label{display:block;font-weight:600;font-size:16px;margin:10px 0 4px}
+input[type=text],input[type=password],select,textarea{width:100%;font:inherit;font-size:17px;padding:9px 12px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--fg)}
+textarea{min-height:130px;resize:vertical;line-height:1.6}
+.btn{font:inherit;font-size:16.5px;font-weight:700;background:var(--fg);color:#fff;border:2px solid var(--fg);border-radius:12px;padding:9px 16px;cursor:pointer;margin:8px 8px 0 0}
+.btn.ghost{background:#fff;color:var(--fg)}
+.btn.small{font-size:15px;padding:6px 12px}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.pill{display:inline-block;border-radius:999px;padding:3px 12px;font-size:15px;font-weight:600;background:#fff;border:2px solid var(--line)}
+.pill.ok{background:var(--sky);border-color:#2c6aa8}.pill.warn{background:var(--peach);border-color:#b8642c}.pill.gray{background:#fff}
+.msg{border-radius:10px;padding:8px 12px;margin:10px 0;font-size:16px;display:none}
+.msg.show{display:block}.msg.err{background:var(--peach)}.msg.good{background:var(--sky)}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:14.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);position:sticky;top:0;background:#fff}
+tr.click{cursor:pointer} tr.click:hover{background:var(--soft)}
+.scroll{max-height:620px;overflow:auto;border:2px solid var(--line);border-radius:14px}
+.fit{display:inline-block;font-weight:700;border-radius:999px;padding:2px 10px;font-size:14.5px;border:2px solid}
+.fit.S{background:var(--sky);border-color:#2c6aa8}.fit.P{background:var(--butter);border-color:#a8870e}.fit.W{background:var(--peach);border-color:#b8642c}
+#detail{display:none;margin:22px 0;border:3px solid var(--fg);border-radius:18px;padding:20px 22px;background:#fff}
+#detail.show{display:block}
+.quote{white-space:pre-wrap;background:var(--soft);border-radius:12px;padding:12px 16px;font-size:17px;line-height:1.7}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+.kv{font-size:16px;color:var(--ink2)}
+.choice{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:16px}
+.preview{white-space:pre-wrap;background:var(--butter);border-radius:12px;padding:12px 16px;font-size:16.5px}
+details summary{cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">BMGT 2020 · CRN 11236 · Reflection 4</span>
+  <h1>Six Days at Riverside Market · instructor page</h1>
+  <p class="note">🔒 Names and Student IDs stay in <b>this browser</b>. The results system only ever has scrambled codes. Nothing on this page works without your instructor key.</p>
+
+  <div class="grid">
+    <div class="card lav">
+      <h2>1 · Connect</h2>
+      <label for="key">Instructor key</label>
+      <input type="password" id="key" autocomplete="off" placeholder="saved in this browser after the first time">
+      <label for="activity">Which results</label>
+      <select id="activity">
+        <option value="RCE-BMGT4">Real student results (RCE-BMGT4)</option>
+        <option value="RCE-BMGT4-TEST">Practice runs only (RCE-BMGT4-TEST)</option>
+      </select>
+      <div class="row"><button class="btn" type="button" id="connectBtn">Connect and refresh</button><span id="connState" class="pill gray">not connected</span></div>
+      <div class="msg" id="connMsg"></div>
+      <details style="margin-top:10px"><summary>Advanced</summary><label for="endpoint">Results system address</label><input type="text" id="endpoint"><button class="btn small ghost" type="button" id="saveEndpoint">Save address</button></details>
+    </div>
+    <div class="card mint">
+      <h2>2 · Class list</h2>
+      <p class="note">Blackboard Grade Center → Work Offline → Download (comma). Load that file here once. It stays in this browser.</p>
+      <input type="file" id="rosterFile" accept=".csv,.txt,.xls">
+      <div class="row"><span id="rosterState" class="pill gray">no class list</span><button class="btn small ghost" type="button" id="forgetRoster">Forget class list</button></div>
+      <div class="msg" id="rosterMsg"></div>
+    </div>
+    <div class="card sky">
+      <h2>3 · Find one student by Student ID</h2>
+      <label for="findId">8 digit Student ID</label>
+      <input type="text" id="findId" inputmode="numeric" autocomplete="off" placeholder="0…">
+      <div class="row"><button class="btn" type="button" id="findBtn">Find</button></div>
+      <div class="msg" id="findMsg"></div>
+    </div>
+  </div>
+
+  <div id="detail"></div>
+
+  <div class="card white" style="margin-top:6px">
+    <div class="row" style="justify-content:space-between"><h2 style="margin:0">4 · Results</h2><span id="counts" class="note"></span></div>
+    <p class="note">Click a row to read the writing and grade it. Due <b>Sunday, December 6, 11:59 PM</b>. Late saves (up to 24 hours) are marked and get 10% off.</p>
+    <div class="scroll"><table id="table"><thead><tr><th>Student</th><th>Status</th><th>Saved</th><th>Choices</th><th>R1</th><th>R2</th><th>Grade saved</th><th>Draft</th></tr></thead><tbody></tbody></table></div>
+    <div id="unmatched"></div>
+  </div>
+
+  <div class="grid">
+    <div class="card butter">
+      <h2>5 · How the class chose</h2>
+      <div id="picture" class="note">Connect to see it.</div>
+    </div>
+    <div class="card peach">
+      <h2>6 · Grades to Blackboard</h2>
+      <p class="note"><b>Upload once</b>, into an <b>empty</b> 10 point column, after the page closes (Monday, December 7, 11:59 PM). After that, type any change in the Grade Center grid.</p>
+      <label for="colHeader">Grade Center column (filled in from the class list file)</label>
+      <input type="text" id="colHeader" placeholder="Reflection 4 [Total Pts: 10 Score] |123456">
+      <label style="font-weight:500"><input type="checkbox" id="zeroMissing"> Put 0 for students with no saved result</label>
+      <div class="row"><button class="btn" type="button" id="saveDrafts">Save all drafts</button><button class="btn ghost" type="button" id="exportBtn">Download Blackboard file</button></div>
+      <div class="msg" id="exportMsg"></div>
+    </div>
+  </div>
+</div>
+<script>
+var DATA = {"people": {"brian": {"name": "Brian", "job": "Store manager", "note": "your boss", "color": "#E9E3F7"}, "ashley": {"name": "Ashley", "job": "Cashier", "note": "18, part time", "color": "#DCEBFA"}, "dave": {"name": "Dave", "job": "Meat department manager", "note": "", "color": "#FFE2CC"}, "josh": {"name": "Josh", "job": "Night stock clerk", "note": "19", "color": "#DDF1E6"}, "rob": {"name": "Rob", "job": "Sales rep", "note": "Fresh Valley Farms", "color": "#FBF0C4"}, "lauren": {"name": "Lauren", "job": "Sales rep", "note": "VitaBright vitamins", "color": "#FADDE7"}, "maria": {"name": "Maria", "job": "Deli manager", "note": "", "color": "#DCEBFA"}}, "job": [["", "You are the new **assistant store manager** at Riverside Market in Manchester. Riverside is a family owned grocery chain in Connecticut. It is the same store from the Opening Day lesson."], ["brian", "Brian hired you two weeks ago. On your first day he said: \"This store runs on numbers. Help me hit them.\""], ["", "This week brings **six hard calls**, one each day, Monday to Saturday. Every choice costs something, even the strong ones."]], "days": [{"id": "mon", "n": 1, "day": "Monday", "time": "9:00 AM", "emoji": "💳", "title": "The card contest", "beats": [["brian", "Brian calls you into his office. \"Corporate wants **300 new Riverside Rewards credit cards** from our store by December 31. That is about 10 a day. Set up a contest for the cashiers. Your call how.\""], ["", "Every new card earns the store $40 from the bank that runs the card."], ["ashley", "The store has 22 cashiers. Most are part time. Ashley is 18. She works four evenings a week after school, and she needs her Saturdays off for her second job."]], "recap": ["brian", "Wants 300 new store credit cards by December 31. You design the cashier contest."], "question": "How do you set up the contest?", "options": [{"key": "A", "fit": "W", "title": "A daily leaderboard", "detail": "A board in the break room ranks every cashier by sign ups each day. Number 1 at the end wins $500. The bottom three work extra Saturdays.", "outcome": [["ashley", "By Thursday, Ashley is in last place. She is scared of losing her Saturdays. On Friday she starts signing up customers who only said \"sure, whatever\" while she bagged their groceries."], ["", "Two weeks later, a 71 year old customer calls the store, upset. A Riverside credit card he never asked for came in the mail. Three more customers call that week."]], "why": ["You tied a big prize and a punishment to one number, and only a few people could win. Scared people cut corners to make the number.", "This is **pressure**, one corner of the **fraud triangle**. Wells Fargo did the same with its \"Great 8\" quotas, and workers opened about 3.5 million accounts that customers never asked for."]}, {"key": "B", "fit": "W", "title": "$25 a card, no limit", "detail": "Every cashier earns $25 for each card they sign up. The register counts the sign ups. No other rules.", "outcome": [["", "Sign ups jump: 41 on the first Saturday. Nobody checks whether each customer really said yes."], ["brian", "By the third week, 14 customers have called to cancel cards they say they never asked for. The bank sends Brian a warning letter."]], "why": ["You paid for sign ups, so you got sign ups, not customers who wanted a card. And nothing checked the sign ups.", "An easy system with no checking is **opportunity**, another corner of the **fraud triangle**. The unit's short version: **you get what you measure**."]}, {"key": "C", "fit": "P", "title": "The leaderboard, plus a rule", "detail": "The same daily leaderboard and $500 prize, with a rule printed at the top: Only sign up customers who clearly say yes.", "outcome": [["", "The rule sits at the top of the poster. The leaderboard sits right under it, and the leaderboard is what everyone looks at."], ["ashley", "By the second week, two customers call about cards they did not want. Ashley tells you, \"We follow the rule. But you want the number.\""]], "why": ["A rule on a poster does not beat a prize on the wall. People do what gets rewarded.", "Enron had a 64 page **code of conduct** and set it aside when it got in the way. Words on paper work only when the rewards match them."]}, {"key": "D", "fit": "S", "title": "A team goal, plus a weekly check", "detail": "If the store reaches 300, every cashier gets $75. Each Friday you call five new card holders to make sure they wanted the card.", "outcome": [["", "Sign ups start slower, about 7 a day. On the first Friday, your five calls find one problem: a new cashier misread the screen and signed up a customer by mistake. You fix it together in five minutes."], ["brian", "By December 31 the store reaches 287 cards, 13 short of 300, with zero complaints. Brian can show corporate that every card is real, and he keeps the contest going in January."]], "why": ["You rewarded the whole team instead of a race, so nobody was scared of last place. And you checked the thing you really wanted: customers who chose the card.", "When you measure the right thing and check it, nobody has a reason to cut corners. **You get what you measure.**"]}], "strong": "A team goal with a weekly check: reward everyone when the store reaches 300, and call a few new card holders each week to make sure they wanted the card."}, {"id": "tue", "n": 2, "day": "Tuesday", "time": "6:15 AM", "emoji": "🥩", "title": "The top seller", "beats": [["dave", "Dave runs the meat department. It has had the best sales of all six Riverside stores, three months in a row. Brian, the store manager, calls Dave \"my MVP.\""], ["", "It is 6:15 AM. The store opens at 7. You walk past the meat case and stop."], ["dave", "Dave is peeling the stickers off packs of ground beef. The old \"sell by\" date is **yesterday**. He puts on new stickers with **tomorrow's** date."], ["dave", "He sees you. \"Relax. I've done this for years. It saves the store $200 a week.\""], ["rule", "Riverside code of conduct, page 4: Never change a date label."]], "recap": ["dave", "Is putting tomorrow's date on yesterday's ground beef. The code says: never change a date label."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Say nothing", "detail": "Dave's numbers carry the store, and Brian, the store manager, trusts him. It is his department.", "outcome": [["", "Three weeks later, a girl gets sick after eating tacos made with Riverside ground beef. The health department checks the store and finds packs with two date stickers, one on top of the other."], ["brian", "The story is on the Hartford news. Brian asks the staff who knew. Two stock clerks say everyone knew."]], "why": ["What a manager lets slide becomes the real rule. Every worker who saw it learned that the code does not apply to stars.", "This is **tone at the top**: what leaders reward, allow, and punish when the rules get in the way. Enron's board set its own code aside, twice, for its star finance chief."]}, {"key": "B", "fit": "W", "title": "Tell Dave to stop from now on", "detail": "Ask him not to do it again. The packs he already relabeled stay on the shelf.", "outcome": [["dave", "Dave nods. \"Sure, sure.\" The 18 relabeled packs sell by noon."], ["", "You do not know if he stops. Nothing is written down. Nobody else knows anything happened."]], "why": ["You hoped Dave would change, but you let old meat reach customers that day. And nothing in the store changed: no record, no report, no follow up.", "The unit's first big idea: **good intentions are not a system**. Ethics has to be built into how the store runs, not left to one person on one hard day."]}, {"key": "C", "fit": "P", "title": "Pull the packs, keep it quiet", "detail": "Take the relabeled packs off the shelf now. Have a quiet word with Dave. Keep it between the two of you.", "outcome": [["dave", "The packs come off the shelf. Dave says, \"Fine, fine.\""], ["josh", "Two weeks later, Josh sees Dave do it again on a Sunday. Josh says nothing. \"It's Dave. Nothing happens to Dave.\""]], "why": ["You protected customers that morning, and that mattered. But the rule bent quietly for the star, and people noticed.", "Real ethics programs **enforce the rules even against stars**. If they do not, everyone learns what the real rule is."]}, {"key": "D", "fit": "S", "title": "Pull the packs and tell Brian", "detail": "Take the relabeled packs off the shelf now. Tell Brian, the store manager, this morning, and say it plainly: the rule has to apply to Dave too.", "outcome": [["brian", "Brian is quiet for a long time. Then he calls Dave in. Dave gets a written warning and has to retake food safety training."], ["brian", "At the 10 AM meeting, Brian tells the meat team: \"Nobody changes a date label. Nobody.\""], ["dave", "Dave is cold to you for a month. Meat sales dip 3%. Nobody gets sick."]], "why": ["The rule held, even for the star. Everyone in the store saw what happened, and that teaches more than any poster.", "This is **tone at the top** working: what leaders do when a rule is inconvenient is the real code."]}], "strong": "Pull the relabeled packs and tell the store manager the same morning. The rule has to apply to the top seller too."}, {"id": "wed", "n": 3, "day": "Wednesday", "time": "9:04 PM", "emoji": "🧊", "title": "The 9 PM text", "beats": [["josh", "Josh stocks shelves at night. He is 19 and started six weeks ago. He is quiet and rarely speaks up."], ["", "You are at home. Your phone buzzes."], ["sms", "sorry to bug u. freezer in aisle 9 says 28 degrees. ice cream is kinda soft. probably nothing? night lead said not to call u"], ["rule", "Store rule: frozen food must stay at 0°F or colder. If it warms up, a manager decides what gets thrown out."]], "recap": ["josh", "Texted you at 9:04 PM: the aisle 9 freezer reads 28 degrees, and the night lead told him not to call you."], "question": "What do you text back?", "options": [{"key": "A", "fit": "S", "title": "Thank him and act tonight", "detail": "\"Thank you for telling me. You did the right thing. Move the ice cream to the back freezer. I'm calling the repair line now. Send me a photo of the thermometer.\"", "outcome": [["josh", "Josh moves 140 cartons to the back freezer by 9:40 PM and sends the photo."], ["", "The repair tech arrives at 11:15 PM. A fan motor died. You throw out 12 cartons that got too soft. The other 128 are fine."], ["josh", "Thursday morning, you tell the night crew that Josh caught it. Over the next month, the night crew texts you twice more about small problems, early, while they are cheap to fix."]], "why": ["The night stock clerk was your **early warning**. You thanked him and acted fast, so the problem stayed small.", "Companies where people speak up early are healthier. Purdue's own sales reps reported abuse in writing in the first three years, and the company did not act. A warning is worth something only if someone acts on it."]}, {"key": "B", "fit": "W", "title": "Not after work hours", "detail": "\"Please don't text me after work. Write it in the maintenance log, and the morning crew will handle it.\"", "outcome": [["josh", "Josh writes it in the log at 9:15 PM. Nobody reads the log until 7 AM."], ["", "By morning the freezer reads 41°F. Everything inside is thrown out: $3,800 of food."], ["josh", "Josh never texts you again. In March, he does not mention the water leaking under the dairy case."]], "why": ["You pushed back on the messenger, so the messages stopped. A quiet staff is like a smoke detector with dead batteries.", "Healthy companies want warnings loud, early, and thanked. People **speak up** only where it is safe to do so."]}, {"key": "C", "fit": "P", "title": "Thanks, I'll check at 7", "detail": "\"Thanks Josh. Put a Do Not Sell sign on the freezer. I'll look at it first thing at 7 AM.\"", "outcome": [["josh", "Josh tapes up the sign. \"ok\""], ["", "At 7 AM the freezer reads 38°F. Everything inside is thrown out: $3,800. If the ice cream had moved the night before, almost all of it would have been fine."]], "why": ["You were kind to the night stock clerk, and that matters. He will tell you again. But you did not act on the warning that night.", "In the Purdue story, the warnings traveled up, but no change came back down. An **early warning** helps only when someone acts on it."]}, {"key": "D", "fit": "W", "title": "Ask the night lead", "detail": "\"Good catch. The night lead is in charge tonight, so check with him and let me know in the morning.\"", "outcome": [["", "The night lead tells Josh, \"It'll be fine. Don't make a big deal.\" Nobody moves the ice cream."], ["", "At 7 AM the freezer reads 38°F. $3,800 of food is thrown out."], ["josh", "Josh learns that speaking up goes nowhere. He went around the night lead once. He will not do it again."]], "why": ["The night stock clerk came to you because the first channel had already failed: the night lead told him not to call. You sent him back to the person who blocked him.", "Reporting inside the company comes first, but only when the inside channel works. When it fails, the warning has to **go around it**."]}], "strong": "Thank him and act that night: move the ice cream, call the repair line, and tell the crew who caught it."}, {"id": "thu", "n": 4, "day": "Thursday", "time": "2:30 PM", "emoji": "🎟️", "title": "Concert tickets", "beats": [["brian", "Brian asked you to help pick the store's produce supplier for next year: **Fresh Valley Farms** or **Green Acres Produce**. The deal is worth $900,000 a year. Your price and quality comparison is due Monday."], ["rob", "Rob, from Fresh Valley Farms, stops by your office with a smile."], ["rob", "\"Two tickets to Saturday's sold out concert at the XL Center in Hartford. Floor seats, $380 each. Nobody at our office can use them. No strings.\""], ["rule", "Riverside code of conduct, page 6: Do not accept gifts worth more than $25 from a supplier. Tell your manager about any offer."]], "recap": ["rob", "Offered you two $380 concert tickets while you are comparing his company with Green Acres Produce."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Take the tickets", "detail": "You know yourself. You can enjoy one concert and still be fair on Monday.", "outcome": [["", "The concert is great. On Monday your numbers show Green Acres is a little cheaper on most items. But you find yourself writing that Fresh Valley \"feels more reliable.\""], ["brian", "Brian picks Fresh Valley. In June, Green Acres hears about the tickets and complains to Riverside's owners."]], "why": ["Nobody bribed you. Your judgment just leaned, quietly, toward the people who were nice to you. Most people never notice it happening.", "This is a **conflict of interest**. In the unit, 8 of 10 experts on an FDA panel had money ties to drug companies, and the panel advised against limiting how opioids could be marketed."]}, {"key": "B", "fit": "W", "title": "Take them, then pick the other supplier", "detail": "Go to the concert, then choose Green Acres on Monday, so nobody can say you were bought.", "outcome": [["", "You go to the concert. On Monday you recommend Green Acres, even though Fresh Valley had better quality on 3 of 5 items."], ["rob", "Rob is angry and tells Brian, the store manager, about the tickets. Brian asks why he is hearing about them from Rob."]], "why": ["Your judgment still bent, just in the other direction. Once the gift was in the room, there was no way to show the choice was fair.", "That is why the situation itself is the **conflict of interest**, even when you mean well."]}, {"key": "C", "fit": "P", "title": "Say no, keep it quiet", "detail": "Turn down the tickets. Nothing happened, so there is nothing to report.", "outcome": [["", "On Monday you give a fair comparison."], ["rob", "In March, Rob mentions to Brian, the store manager, \"Your assistant manager turned down my concert tickets.\""], ["brian", "Brian asks why you never told him. You did nothing wrong, but now he wonders what else he does not know."]], "why": ["Saying no was right. But the code asks you to report every offer, so the decision stays clean in everyone's eyes.", "The unit's fix for a **conflict of interest** is two words: **disclose** (say it out loud) and **recuse** (step out of the decision). You did the first half of the right thing."]}, {"key": "D", "fit": "S", "title": "Say no, tell Brian, step back", "detail": "Turn down the tickets. Tell Brian, the store manager, about the offer today, in writing. Offer to let someone else make the final pick.", "outcome": [["rob", "Rob shrugs. \"Your loss.\""], ["brian", "Brian thanks you for the note. You still do the price comparison, but Brian makes the final pick himself."], ["brian", "He adds a line to the store rules: every supplier offer gets written down. In February a box of apples arrives for the break room. Under $25. Written down."]], "why": ["You said it out loud and stepped back from the decision. Nobody can question the pick, not even you.", "This is the two word fix from the unit for a **conflict of interest**: **disclose and recuse**."]}], "strong": "Say no, tell the store manager in writing the same day, and step back from the final pick."}, {"id": "fri", "n": 5, "day": "Friday", "time": "10:00 AM", "emoji": "💊", "title": "The vitamin sign", "beats": [["lauren", "Lauren, from VitaBright vitamins, brings a big sign for the vitamin aisle. It says: **DOCTOR PROVEN · Cuts colds in HALF!**"], ["lauren", "You ask what the proof is. She hands you one page about the study."], ["study", "The study: **38 college students**. **Two weeks**. **Paid for by VitaBright**. The 19 students who took the vitamin had 2 colds in total. The 19 who did not had 4."], ["brian", "Brian walks by. \"Cold season. This sign will sell. Put it up.\""], ["", "You are in charge of the health aisle displays."]], "recap": ["lauren", "Wants a DOCTOR PROVEN · Cuts colds in HALF! sign. The proof: one study, 38 students, two weeks, paid for by her company."], "question": "What do you do with the sign?", "options": [{"key": "A", "fit": "W", "title": "Put it up", "detail": "A real study found it. The sign is true.", "outcome": [["", "VitaBright sales triple in December."], ["", "In January, a customer writes to the Connecticut Attorney General. She spent $90 on VitaBright for her family because the sign said doctor proven. All four of them caught colds anyway."], ["brian", "The Attorney General's office sends Brian a letter asking for the proof behind the sign."]], "why": ["The study was real, but tiny: 38 students, two weeks, paid for by the company. The sign made it sound proven for everyone.", "**A true finding, lifted out of its context, can do the work of a lie.** Purdue's \"less than 1%\" addiction claim came from a five sentence letter about hospital patients."]}, {"key": "B", "fit": "W", "title": "Put it up and let customers decide", "detail": "Customers can look up the study if they care. Adults make their own choices.", "outcome": [["", "Nobody looks up the study. Shoppers read the big words: DOCTOR PROVEN."], ["", "Sales triple. In January, three customers ask the pharmacist why the vitamins did not work."]], "why": ["The law does not ask whether a shopper could dig up the truth. It asks whether a regular shopper would be misled by the sign.", "This is the **reasonable consumer standard**. A regular shopper reads \"doctor proven\" and believes it."]}, {"key": "C", "fit": "P", "title": "Put it up and add small print", "detail": "Hang the sign and add a small line at the bottom: Based on one small study.", "outcome": [["", "The small line sits at knee height. Shoppers read the big words. Sales triple."], ["", "One customer asks you, \"So does it cut colds in half or not?\" You do not have a good answer."]], "why": ["Small print does not fix a big claim. What counts is what a regular shopper walks away believing, and that comes from the big words.", "Under the **reasonable consumer standard**, the headline is the message."]}, {"key": "D", "fit": "S", "title": "Ask for an honest sign", "detail": "Do not hang it. Ask for a sign that says only what the study found and who was in it, or no health claim at all.", "outcome": [["lauren", "Lauren is annoyed, but two days later she sends a new sign: Vitamin C and zinc. Studied in 38 college students."], ["brian", "Brian grumbles. \"Less exciting.\" Sales go up 20%, not 300%. No letters. No complaints."]], "why": ["You kept the claim the same size as the evidence. A sign can be persuasive and still be honest.", "When a product touches health, **telling the truth about it is the floor**, not a bonus."]}], "strong": "Do not hang the stretched sign. Ask for one that says only what the study found and who was in it."}, {"id": "sat", "n": 6, "day": "Saturday", "time": "6:40 PM", "emoji": "🥪", "title": "Everyone does it", "beats": [["maria", "Maria runs the deli. You may remember her from the Opening Day lesson: this is the job she applied for."], ["", "It is the busiest Saturday of the year. The deli is short two people. One called out sick. One quit on Thursday."], ["rule", "Food safety rule: the meat slicer is taken apart and cleaned every 4 hours. Each cleaning gets a signature on the cleaning log. The state inspector checks the log."], ["", "The 2 PM and 6 PM cleanings did not happen. There has been a line of 20 customers all afternoon."], ["maria", "Maria holds out the log and a pen. \"Just sign the two lines. **Everyone does it** on a day like this. The inspector only checks signatures. **Nobody gets hurt.** It's **just this once**.\""]], "recap": ["maria", "Wants you to sign the slicer cleaning log for two cleanings that did not happen."], "question": "What do you do?", "options": [{"key": "A", "fit": "W", "title": "Sign the two lines", "detail": "Just this once. Maria is drowning, and you are her manager. Help her out.", "outcome": [["maria", "You sign. The next Saturday the deli is short again. Maria does not ask this time. She signs the lines herself. \"You did it last week.\""], ["", "By January, the log is filled in once at the end of each shift, every line at once, in the same pen."]], "why": ["Listen to the sentences: \"Everyone does it.\" \"Nobody gets hurt.\" \"Just this once.\" These are **rationalizations**, the stories people tell themselves so a bad choice feels normal.", "The unit's test: **if you keep needing to explain why it is fine, it is not fine.**"]}, {"key": "B", "fit": "W", "title": "Let Maria sign it", "detail": "Tell her to sign it herself. You did not see anything.", "outcome": [["maria", "Maria signs. You walk away."], ["", "Two weeks later, a state inspector swabs the slicer and finds listeria, a germ that can make people very sick. The deli closes for three days."], ["maria", "The log shows Maria's signatures at times the slicer was never cleaned. Maria is fired. You are not. But you saw it."]], "why": ["Looking away is still a choice. The deli manager had pressure (too few people), opportunity (a log nobody checks), and a story (\"everyone does it\"). You left all three standing.", "Pressure, opportunity, and rationalization together are the **fraud triangle**. Remove any one corner, and most fraud never happens."]}, {"key": "C", "fit": "P", "title": "Refuse and walk away", "detail": "Do not sign. Tell Maria the slicer has to be cleaned now, then go back to the front registers.", "outcome": [["maria", "Maria cleans the slicer alone while 14 customers wait. Two of them leave angry. She writes the true time on the log: 6:55 PM."], ["maria", "She is furious with you. The next Saturday she is short again. Nothing about the schedule has changed."]], "why": ["You refused to lie, and that was right. But you left the deli manager alone with the same pressure that made her ask.", "Fix the pressure too, or the same moment comes back next week. That is how the **fraud triangle** works: take away a corner, and most fraud never happens."]}, {"key": "D", "fit": "S", "title": "Refuse and clean it together", "detail": "Do not sign. Stop the slicer for 20 minutes and clean it with Maria. Write the true time. On Monday, ask Brian, the store manager, for one more Saturday deli worker.", "outcome": [["", "You put up a sign: Fresh sliced meats back at 7:05. Some customers grumble. Most wait."], ["maria", "You and Maria clean the slicer in 18 minutes. The log is honest: 6:58 PM, cleaned late, short staffed."], ["brian", "On Monday, Brian adds a Saturday deli shift."]], "why": ["You said no to the lie, and you fixed the pressure behind it. An honest log plus enough people removes two corners of the **fraud triangle**.", "And notice: you never had to explain to yourself why it was fine."]}], "strong": "Do not sign. Clean the slicer with the deli manager, write the true time, and ask the store manager for one more Saturday worker."}], "refl": [{"key": "r1", "title": "What gets counted", "emoji": "🔢", "example": ["Kayla is in 10th grade. Her English teacher gives a prize each month to the student who logs the most reading minutes.", "By the second week, some of Kayla's friends log minutes while the book sits closed on the bed. Nobody checks.", "The teacher counted **minutes**, so she got minutes, not reading."], "ask": "Think of a time a number, a score, or a reward pushed you, or people around you, to cut a corner. School, a sports team, a game, your family, a job, or a news story all count.", "steps": ["What was being counted?", "What corner got cut, and by whom?", "If you made the rule, what would you count or check instead?"], "ideas": "pressure, you get what you measure, the fraud triangle"}, {"key": "r2", "title": "Saying it out loud", "emoji": "🗣️", "example": ["Marcus is 16 and swims on a summer team. He sees the assistant coach let one swimmer skip the deep water safety test. The swimmer is the coach's nephew.", "Marcus thinks, \"Not my business. Everybody likes Coach.\" He says nothing.", "Two weeks later, the swimmer panics in the deep end, and a lifeguard has to pull him out."], "ask": "Think of a time you saw something that was not right and had to decide whether to say something. School, a team, friends, family, online, or a job all count. It is fine if you stayed quiet. Honest answers earn the points.", "steps": ["What happened, and where?", "What made it hard, or easy, to speak up?", "Which idea from this unit helps you see it differently now?"], "ideas": "speaking up early, conflict of interest, rationalization, tone at the top", "fallback": "Nothing comes to mind? Pick the day in this simulation that would be hardest for you, and explain what would make it hard for you, with a moment from your own life."}], "ideas": [["💳", "You get what you measure", "Reward the team, and check the thing you really want."], ["🥩", "Tone at the top", "The rules have to apply to the stars too."], ["🧊", "Speaking up early", "Thank the messenger, then act."], ["🎟️", "Conflict of interest", "Disclose and recuse: say it out loud, and step out of the decision."], ["💊", "Honest marketing", "Keep the claim the same size as the evidence."], ["🥪", "Rationalization", "If you keep explaining why it is fine, it is not fine."]]};
+var CFG = {"ENDPOINT": "https://script.google.com/macros/s/AKfycbyLR93lWGX5ypNLlGLK7nu86LXTaVbEE35jzG5wfNb75NHgoDvHyOkTjPsgoDZI-wrdqQ/exec", "SALT1": "northline-ctstate-2026", "SECTION": "11236", "DUE": "2026-12-06T23:59:00-05:00"};
+var PTS = {S:1, P:0.5, W:0};
+var FITLABEL = {S:'Strong', P:'Partly', W:'Weak'};
+var $ = function(id){ return document.getElementById(id); };
+var rows = [], roster = [], colsFromFile = [], open = null, armed = false;
+
+function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'}[c]; }); }
+function words(s){ var m = String(s || '').trim().match(/\S+/g); return m ? m.length : 0; }
+function half(x){ x = Math.round(Number(x) * 2) / 2; var w = Math.floor(x), f = x - w; if (!w && !f) return '0'; return (w ? String(w) : '') + (f ? '½' : ''); }
+function r1(x){ return Math.round(Number(x) * 10) / 10; }
+function when(iso){ var d = new Date(iso); return iso && !isNaN(d) ? d.toLocaleString([], {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'}) : ''; }
+function lsGet(k, d){ try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch(e){ return d; } }
+function lsSet(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+function show(id, text, err){ var el = $(id); el.textContent = text; el.className = 'msg show ' + (err ? 'err' : 'good'); }
+function hide(id){ $(id).className = 'msg'; }
+function pill(id, text, kind){ var el = $(id); el.textContent = text; el.className = 'pill ' + (kind || 'gray'); }
+function endpoint(){ return lsGet('r4_endpoint', CFG.ENDPOINT); }
+function activity(){ return $('activity').value; }
+function normalizeId(raw){ return String(raw || '').replace(/\D/g, ''); }
+async function sha256Hex(text){ var buf = new TextEncoder().encode(text); var hash = await crypto.subtle.digest('SHA-256', buf); return Array.from(new Uint8Array(hash)).map(function(b){ return b.toString(16).padStart(2, '0'); }).join(''); }
+async function postOnce(payload, timeoutMs){
+  var ctrl = new AbortController(); var t = setTimeout(function(){ ctrl.abort(); }, timeoutMs || 45000);
+  try { var res = await fetch(endpoint(), {method:'POST', body:JSON.stringify(payload), signal:ctrl.signal, credentials:'omit', cache:'no-store'}); var txt = await res.text(); try { return JSON.parse(txt); } catch(e){ return {ok:false, error:'bad_response'}; } }
+  catch(e){ return {ok:false, error:(e && e.name === 'AbortError') ? 'timeout' : 'network'}; }
+  finally { clearTimeout(t); }
+}
+async function post(payload){ payload.key = $('key').value.trim(); var r = null; for (var a = 0; a < 3; a++){ r = await postOnce(payload); if (r && (r.ok || (r.error !== 'timeout' && r.error !== 'network' && r.error !== 'bad_response'))) return r; await new Promise(function(res){ setTimeout(res, 1200 + a * 800); }); } return r; }
+
+/* ---------- reading a saved row ---------- */
+function parseJ(x, d){ try { return typeof x === 'string' ? (x ? JSON.parse(x) : d) : (x == null ? d : x); } catch(e){ return d; } }
+function dayIndexById(id){ for (var i = 0; i < DATA.days.length; i++){ if (DATA.days[i].id === id) return i; } return -1; }
+function optOf(di, key){ var os = DATA.days[di].options; for (var i = 0; i < os.length; i++){ if (os[i].key === key) return os[i]; } return null; }
+function picksOf(r){ var out = DATA.days.map(function(){ return null; }); parseJ(r.paths, []).forEach(function(p){ var di = dayIndexById(p && p[0]); if (di >= 0){ var o = optOf(di, p[1]); if (o) out[di] = o; } }); return out; }
+function choicePoints(r){ return picksOf(r).reduce(function(t, o){ return t + (o ? PTS[o.fit] : 0); }, 0); }
+function isLate(r){ return !!(r && r.submittedAt && new Date(r.submittedAt).getTime() > new Date(CFG.DUE).getTime() + 5 * 60 * 1000); }
+function graded(r){ return !!(r && r.score !== '' && r.score !== null && r.score !== undefined); }
+function drafts(){ return lsGet('r4_drafts_' + activity(), {}); }
+function setDraft(id, d){ var all = drafts(); if (d) all[id] = d; else delete all[id]; lsSet('r4_drafts_' + activity(), all); }
+function savedMarks(r){ var m = String(r.feedback || '').match(/Reflection 1: ([0-9½]+) of 2 · Reflection 2: ([0-9½]+) of 2/); if (!m) return null; var n = function(s){ return s === '½' ? 0.5 : parseFloat(s) + (/½/.test(s) ? 0.5 : 0); }; return {w1:n(m[1]), w2:n(m[2])}; }
+function total(r, w1, w2, late){ var raw = choicePoints(r) + Number(w1 || 0) + Number(w2 || 0); return late ? r1(raw * 0.9) : raw; }
+function headerLine(r, w1, w2, late){ var raw = choicePoints(r) + Number(w1) + Number(w2); return 'Choices: ' + half(choicePoints(r)) + ' of 6 · Reflection 1: ' + half(w1) + ' of 2 · Reflection 2: ' + half(w2) + ' of 2 · Total: ' + half(raw) + ' of 10' + (late ? ' · Saved late, 10% off: ' + r1(raw * 0.9) : ''); }
+function studentFeedback(r, w1, w2, late, comment){ return headerLine(r, w1, w2, late) + (String(comment || '').trim() ? '\n\n' + String(comment).trim() : ''); }
+function commentOnly(fb){ var s = String(fb || ''); var i = s.indexOf('\n\n'); return /^Choices: /.test(s) ? (i >= 0 ? s.slice(i + 2) : '') : s; }
+
+/* ---------- connect and refresh ---------- */
+async function connect(){
+  hide('connMsg');
+  if (!$('key').value.trim()){ show('connMsg', 'Type the instructor key first.', true); return; }
+  lsSet('nl_key', $('key').value.trim());
+  pill('connState', 'loading…', 'gray');
+  var r = await post({action:'rceResults', activity:activity(), section:CFG.SECTION});
+  if (!r || !r.ok){ pill('connState', 'not connected', 'warn'); show('connMsg', r && r.error === 'unauthorized' ? 'The key did not match.' : 'Could not load results: ' + ((r && r.error) || 'no answer') + '.', true); return; }
+  rows = (r.rows || []).filter(function(x){ return String(x.activity) === activity() && String(x.section) === CFG.SECTION; });
+  pill('connState', 'connected · ' + rows.length + ' record' + (rows.length === 1 ? '' : 's'), 'ok');
+  if (roster.length && !roster[0].h2) await matchRoster();
+  paint();
+}
+
+/* ---------- class list ---------- */
+function parseCSV(text){
+  var out = [], row = [], cur = '', q = false, i, c, sep = (text.split('\n')[0].indexOf('\t') >= 0 && text.split('\n')[0].indexOf(',') < 0) ? '\t' : ',';
+  for (i = 0; i < text.length; i++){ c = text[i];
+    if (q){ if (c === '"'){ if (text[i + 1] === '"'){ cur += '"'; i++; } else q = false; } else cur += c; }
+    else if (c === '"') q = true; else if (c === sep){ row.push(cur); cur = ''; } else if (c === '\n'){ row.push(cur); out.push(row); row = []; cur = ''; } else if (c !== '\r') cur += c; }
+  if (cur || row.length){ row.push(cur); out.push(row); }
+  return out.filter(function(r){ return r.some(function(x){ return String(x).trim(); }); });
+}
+function decodeFile(buf){ var b = new Uint8Array(buf); if (b[0] === 0xFF && b[1] === 0xFE) return new TextDecoder('utf-16le').decode(buf); if (b[0] === 0xFE && b[1] === 0xFF) return new TextDecoder('utf-16be').decode(buf); return new TextDecoder('utf-8').decode(buf).replace(/^﻿/, ''); }
+async function loadRosterText(text){
+  hide('rosterMsg');
+  var t = parseCSV(text); if (t.length < 2){ show('rosterMsg', 'That does not look like a Grade Center download.', true); return; }
+  var head = t[0].map(function(h){ return String(h).trim(); });
+  var ix = function(n){ for (var i = 0; i < head.length; i++){ if (head[i].toLowerCase() === n) return i; } return -1; };
+  var iL = ix('last name'), iF = ix('first name'), iU = ix('username');
+  if (iU < 0){ show('rosterMsg', 'No Username column. Download the Grade Center with the default columns.', true); return; }
+  var list = [];
+  for (var r = 1; r < t.length; r++){ var u = String(t[r][iU] || '').trim(); if (!u || /preview/i.test(u)) continue; list.push({last:iL >= 0 ? t[r][iL] : '', first:iF >= 0 ? t[r][iF] : '', username:u}); }
+  colsFromFile = head.filter(function(h){ return /\[Total Pts:/i.test(h); });
+  lsSet('nl_cols_' + CFG.SECTION, colsFromFile);
+  pickColumn();
+  await installRoster(list, 'file');
+}
+function pickColumn(){ var c = colsFromFile.filter(function(h){ return /Reflection 4/i.test(h); })[0]; if (c && !$('colHeader').value) $('colHeader').value = c; }
+async function installRoster(list, source){
+  for (var i = 0; i < list.length; i++){ list[i].h1 = await sha256Hex(CFG.SALT1 + '|' + normalizeId(list[i].username)); }
+  roster = list;
+  lsSet('nl_roster_' + CFG.SECTION, list.map(function(s){ return {last:s.last, first:s.first, username:s.username}; }));
+  pill('rosterState', roster.length + ' students' + (source === 'storage' ? ' (remembered)' : ''), 'ok');
+  await matchRoster(); paint();
+}
+async function matchRoster(){
+  if (!roster.length || !$('key').value.trim()) return;
+  var r = await post({action:'match', h1s:roster.map(function(s){ return s.h1; })});
+  if (r && r.ok && Array.isArray(r.h2s)) roster.forEach(function(s, i){ s.h2 = r.h2s[i]; });
+  else show('rosterMsg', 'Could not match the class list: ' + ((r && r.error) || 'no answer') + '.', true);
+}
+function join(){
+  var byId = {}; rows.forEach(function(r){ byId[String(r.recordId)] = r; });
+  var used = {};
+  var joined = roster.map(function(s){ var r = s.h2 ? byId[s.h2] : null; if (r) used[r.recordId] = 1; return {s:s, r:r}; });
+  joined.sort(function(a, b){ return String(a.s.last).localeCompare(String(b.s.last)) || String(a.s.first).localeCompare(String(b.s.first)); });
+  return {joined:joined, unmatched:rows.filter(function(r){ return !used[r.recordId]; })};
+}
+
+/* ---------- table ---------- */
+function statusText(r){ if (!r) return 'No record'; if (!r.submittedAt) return 'Started only'; return isLate(r) ? 'Saved late' : 'Saved on time'; }
+function draftCell(r){ var d = r && drafts()[r.recordId]; return d ? '✎ ' + total(r, d.w1, d.w2, d.late) : ''; }
+function rowHTML(name, r, key){
+  var sub = r && r.submittedAt;
+  return '<tr class="click" data-open="' + esc(key) + '"><td><b>' + esc(name) + '</b></td><td>' + statusText(r) + '</td><td>' + (sub ? esc(when(r.submittedAt)) : '') + '</td><td>' + (sub ? half(choicePoints(r)) + ' / 6' : '') + '</td><td>' + (sub ? words(r.reflection1) + ' w' : '') + '</td><td>' + (sub ? words(r.reflection2) + ' w' : '') + '</td><td>' + (graded(r) ? '<b>' + esc(r.score) + '</b>' : '') + '</td><td>' + draftCell(r) + '</td></tr>';
+}
+function paint(){
+  var tb = document.querySelector('#table tbody'), h = '', j = join();
+  if (roster.length) j.joined.forEach(function(x){ h += rowHTML(x.s.last + ', ' + x.s.first, x.r, x.r ? x.r.recordId : 'u:' + x.s.username); });
+  var un = roster.length ? j.unmatched : rows;
+  un.forEach(function(r){ h += rowHTML((roster.length ? 'Not on the class list · ' : 'Record ') + String(r.recordId).slice(0, 6).toUpperCase(), r, r.recordId); });
+  tb.innerHTML = h || '<tr><td colspan="8">Nothing yet.</td></tr>';
+  Array.prototype.forEach.call(tb.querySelectorAll('[data-open]'), function(tr){ tr.addEventListener('click', function(){ openDetail(tr.dataset.open); }); });
+  var subs = rows.filter(function(r){ return r.submittedAt; });
+  $('counts').textContent = subs.length + ' saved (' + subs.filter(isLate).length + ' late) · ' + rows.filter(function(r){ return !r.submittedAt; }).length + ' started only' + (roster.length ? ' · ' + j.joined.filter(function(x){ return !x.r; }).length + ' with no record' : '') + ' · ' + subs.filter(graded).length + ' graded';
+  $('unmatched').innerHTML = roster.length && j.unmatched.length ? '<p class="note">⚠️ ' + j.unmatched.length + ' record(s) do not match the class list. Usually a mistyped Student ID. Match them by the saved time when a student emails.</p>' : '';
+  paintPicture(subs);
+  var n = Object.keys(drafts()).length; $('saveDrafts').textContent = 'Save all drafts (' + n + ')'; $('saveDrafts').disabled = !n;
+}
+function paintPicture(subs){
+  if (!subs.length){ $('picture').textContent = 'No saved results yet.'; return; }
+  var h = '<table><thead><tr><th>Day</th><th>Strong</th><th>Partly</th><th>Weak</th></tr></thead><tbody>';
+  DATA.days.forEach(function(d, i){ var c = {S:0, P:0, W:0}; subs.forEach(function(r){ var o = picksOf(r)[i]; if (o) c[o.fit]++; }); h += '<tr><td>' + d.emoji + ' ' + esc(d.title) + '</td><td>' + c.S + '</td><td>' + c.P + '</td><td>' + c.W + '</td></tr>'; });
+  $('picture').innerHTML = h + '</tbody></table>';
+}
+
+/* ---------- one student ---------- */
+function personFor(r){ var s = null; roster.forEach(function(x){ if (r && x.h2 === r.recordId) s = x; }); return s; }
+function openDetail(key){
+  var el = $('detail');
+  if (String(key).indexOf('u:') === 0){ var u = key.slice(2), s = roster.filter(function(x){ return x.username === u; })[0]; open = null; el.innerHTML = '<span class="tag">No record</span><h2>' + esc(s ? s.first + ' ' + s.last : u) + '</h2><p>No start and no save under this Student ID.</p><button class="btn ghost" type="button" onclick="closeDetail()">Close</button>'; el.className = 'show'; el.scrollIntoView({behavior:'smooth'}); return; }
+  var r = rows.filter(function(x){ return x.recordId === key; })[0]; if (!r) return;
+  open = key;
+  var s = personFor(r), picks = picksOf(r), d = drafts()[key], sm = savedMarks(r);
+  var w1 = d ? d.w1 : (sm ? sm.w1 : ''), w2 = d ? d.w2 : (sm ? sm.w2 : ''), late = d ? !!d.late : isLate(r), comment = d ? d.comment : commentOnly(r.feedback);
+  var opts = function(v){ return ['', 0, 0.5, 1, 1.5, 2].map(function(x){ return '<option value="' + x + '"' + (String(v) === String(x) ? ' selected' : '') + '>' + (x === '' ? '…' : half(x)) + '</option>'; }).join(''); };
+  var h = '<div class="row" style="justify-content:space-between"><div><span class="tag">' + esc(statusText(r)) + ' · record ' + esc(String(key).slice(0, 6).toUpperCase()) + '</span><h2 style="margin:4px 0">' + esc(s ? s.first + ' ' + s.last : 'Not on the class list') + '</h2><div class="kv">' + (s ? 'Student ID ' + esc(s.username) + ' · ' : '') + 'started ' + esc(when(r.startedAt)) + (r.submittedAt ? ' · saved ' + esc(when(r.submittedAt)) + ' · ' + esc(r.minutes) + ' min' : '') + '</div></div><button class="btn ghost" type="button" onclick="closeDetail()">Close</button></div>';
+  if (!r.submittedAt){ el.innerHTML = h + '<p>Started but never saved. Nothing to grade.</p>'; el.className = 'show'; el.scrollIntoView({behavior:'smooth'}); return; }
+  h += '<div class="cols"><div><h2 style="margin-top:14px">Six choices · ' + half(choicePoints(r)) + ' of 6</h2>' + DATA.days.map(function(day, i){ var o = picks[i]; return '<div class="choice"><span>' + day.emoji + ' ' + esc(day.title) + '<br><span class="kv">' + (o ? esc(o.title) : 'none') + '</span></span>' + (o ? '<span class="fit ' + o.fit + '">' + FITLABEL[o.fit] + '</span>' : '') + '</div>'; }).join('') + '</div>';
+  h += '<div><h2 style="margin-top:14px">Grade</h2><label>Reflection 1 · ' + esc(DATA.refl[0].title) + ' (0 to 2)</label><select id="w1">' + opts(w1) + '</select><label>Reflection 2 · ' + esc(DATA.refl[1].title) + ' (0 to 2)</label><select id="w2">' + opts(w2) + '</select>' +
+    '<label style="font-weight:500"><input type="checkbox" id="late"' + (late ? ' checked' : '') + '> Saved late: 10% off' + (isLate(r) ? ' (saved after the due time)' : '') + '</label>' +
+    '<label for="comment">Feedback to the student</label><textarea id="comment">' + esc(comment) + '</textarea>' +
+    '<label>What the student will see</label><div class="preview" id="preview"></div>' +
+    '<div class="row"><button class="btn ghost" type="button" id="keepDraft">Keep as draft</button><button class="btn" type="button" id="saveGrade">Save grade now</button></div><div class="msg" id="gradeMsg"></div>' +
+    (graded(r) ? '<p class="kv">Saved grade: <b>' + esc(r.score) + '</b> on ' + esc(when(r.gradedAt)) + '</p>' : '') + '</div></div>';
+  h += '<h2 style="margin-top:18px">Reflection 1 · ' + esc(DATA.refl[0].title) + ' · ' + words(r.reflection1) + ' words</h2><div class="quote">' + esc(r.reflection1) + '</div>';
+  h += '<h2 style="margin-top:18px">Reflection 2 · ' + esc(DATA.refl[1].title) + ' · ' + words(r.reflection2) + ' words</h2><div class="quote">' + esc(r.reflection2) + '</div>';
+  el.innerHTML = h; el.className = 'show';
+  var upd = function(){ var a = $('w1').value, b = $('w2').value; $('preview').textContent = (a === '' || b === '') ? 'Pick both reflection scores.' : studentFeedback(r, a, b, $('late').checked, $('comment').value) + '\n\nScore in Blackboard: ' + total(r, a, b, $('late').checked) + ' of 10'; };
+  ['w1', 'w2', 'late', 'comment'].forEach(function(id){ $(id).addEventListener('input', upd); $(id).addEventListener('change', upd); }); upd();
+  $('keepDraft').addEventListener('click', function(){ var a = $('w1').value, b = $('w2').value; if (a === '' || b === ''){ show('gradeMsg', 'Pick both reflection scores first.', true); return; } setDraft(key, {w1:Number(a), w2:Number(b), late:$('late').checked, comment:$('comment').value, t:Date.now()}); show('gradeMsg', 'Draft kept in this browser. Not visible to the student yet.'); paint(); });
+  $('saveGrade').addEventListener('click', async function(){ var a = $('w1').value, b = $('w2').value; if (a === '' || b === ''){ show('gradeMsg', 'Pick both reflection scores first.', true); return; } var ok = await saveOne(r, Number(a), Number(b), $('late').checked, $('comment').value); if (ok){ show('gradeMsg', 'Saved. The student can see it now.'); openDetail(key); } else show('gradeMsg', 'Not saved. Try again.', true); });
+  el.scrollIntoView({behavior:'smooth'});
+}
+function closeDetail(){ $('detail').className = ''; open = null; }
+async function saveOne(r, w1, w2, late, comment){
+  var res = await post({action:'rceGrade', activity:activity(), recordId:r.recordId, score:total(r, w1, w2, late), feedback:studentFeedback(r, w1, w2, late, comment)});
+  if (res && res.ok){ setDraft(r.recordId, null); r.score = res.score; r.feedback = studentFeedback(r, w1, w2, late, comment); r.gradedAt = new Date().toISOString(); paint(); return true; }
+  return false;
+}
+async function saveAllDrafts(){
+  hide('exportMsg');
+  var ds = drafts(), ids = Object.keys(ds); if (!ids.length) return;
+  if (!armed){ armed = true; $('saveDrafts').textContent = 'Click again to save ' + ids.length + ' grade(s) for students to see'; setTimeout(function(){ armed = false; paint(); }, 6000); return; }
+  armed = false; var done = 0, fail = 0;
+  for (var i = 0; i < ids.length; i++){ var r = rows.filter(function(x){ return x.recordId === ids[i]; })[0], d = ds[ids[i]]; if (!r){ fail++; continue; } if (await saveOne(r, d.w1, d.w2, d.late, d.comment)) done++; else fail++; }
+  show('exportMsg', done + ' grade(s) saved' + (fail ? ', ' + fail + ' not saved (try again)' : '') + '.', !!fail); paint();
+}
+
+/* ---------- find by Student ID ---------- */
+async function findById(){
+  hide('findMsg');
+  var d = normalizeId($('findId').value); if (d.length !== 8){ show('findMsg', 'A Student ID has 8 digits.', true); return; }
+  if (!$('key').value.trim()){ show('findMsg', 'Connect first.', true); return; }
+  var h1 = await sha256Hex(CFG.SALT1 + '|' + d);
+  var m = await post({action:'match', h1s:[h1]}); if (!m || !m.ok){ show('findMsg', 'Could not reach the results system.', true); return; }
+  var h2 = m.h2s[0], r = rows.filter(function(x){ return x.recordId === h2; })[0];
+  if (!r){ await connect(); r = rows.filter(function(x){ return x.recordId === h2; })[0]; }
+  if (!r){ show('findMsg', 'No record for this Student ID (record code ' + String(h2).slice(0, 6).toUpperCase() + ').', true); return; }
+  show('findMsg', 'Found: ' + statusText(r) + '.'); openDetail(r.recordId);
+}
+
+/* ---------- Blackboard file ---------- */
+function csvField(v){ return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"'; }
+function exportCsv(){
+  hide('exportMsg');
+  if (!roster.length){ show('exportMsg', 'Load the class list first.', true); return; }
+  var header = $('colHeader').value.trim() || 'Reflection 4 [Total Pts: 10 Score]';
+  var lines = [['Last Name', 'First Name', 'Username', header].map(csvField).join(',')], filled = 0, blanks = 0, zero = $('zeroMissing').checked;
+  join().joined.forEach(function(x){ var v = ''; if (x.r && graded(x.r)){ v = String(x.r.score); filled++; } else if (zero && !(x.r && x.r.submittedAt)){ v = '0'; filled++; } else blanks++; lines.push([x.s.last, x.s.first, x.s.username, v].map(csvField).join(',')); });
+  var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([lines.join('\r\n') + '\r\n'], {type:'text/csv;charset=utf-8'}));
+  a.download = 'BMGT 2020 CRN 11236 · Reflection 4 upload · ' + new Date().toISOString().slice(0, 10) + '.csv'; document.body.appendChild(a); a.click(); a.remove();
+  show('exportMsg', 'File made: ' + filled + ' grades' + (blanks ? ', ' + blanks + ' left blank (not graded or not saved)' : '') + '.' + (/\|\s*\d+\s*$/.test(header) ? '' : ' The column has no ID number, so Blackboard matches it by name.'));
+}
+
+/* ---------- boot ---------- */
+(function(){
+  $('endpoint').value = endpoint();
+  $('key').value = lsGet('nl_key', '');
+  $('activity').value = lsGet('r4_activity', 'RCE-BMGT4');
+  colsFromFile = lsGet('nl_cols_' + CFG.SECTION, []); pickColumn();
+  $('connectBtn').addEventListener('click', connect);
+  $('saveEndpoint').addEventListener('click', function(){ lsSet('r4_endpoint', $('endpoint').value.trim() || CFG.ENDPOINT); show('connMsg', 'Address saved.'); });
+  $('activity').addEventListener('change', function(){ lsSet('r4_activity', activity()); closeDetail(); if ($('key').value.trim()) connect(); });
+  $('rosterFile').addEventListener('change', function(ev){ var f = ev.target.files[0]; if (!f) return; var fr = new FileReader(); fr.onload = function(){ loadRosterText(decodeFile(fr.result)); }; fr.readAsArrayBuffer(f); });
+  $('forgetRoster').addEventListener('click', function(){ localStorage.removeItem('nl_roster_' + CFG.SECTION); roster = []; pill('rosterState', 'no class list', 'gray'); paint(); });
+  $('findBtn').addEventListener('click', findById);
+  $('findId').addEventListener('keydown', function(e){ if (e.key === 'Enter') findById(); });
+  $('saveDrafts').addEventListener('click', saveAllDrafts);
+  $('exportBtn').addEventListener('click', exportCsv);
+  var saved = lsGet('nl_roster_' + CFG.SECTION, null);
+  (async function(){ if (saved && saved.length) await installRoster(saved, 'storage'); if ($('key').value.trim()) connect(); else paint(); })();
+})();
+</script>
+</body>
+</html>
